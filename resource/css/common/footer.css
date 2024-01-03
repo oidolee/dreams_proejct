@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+footer{ min-height: 200px; display: flex; background-color: #000;}
+.footer-1{width: 100%;}
+.footer-list-box{height: 100%; display: flex;justify-content: space-between; align-items: center;}
+.footer-list-box .item-box ul{display: flex; padding: 0;}
+.footer-list-box .item-box ul li{margin-right: 10px;}

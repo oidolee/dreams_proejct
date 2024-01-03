@@ -1,0 +1,155 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // header.html이 로드된 후에 menu와 gnbNav를 찾음
+        let menu = document.querySelector(".menu");
+        let gnbNav = document.querySelector(".gnb_nav");
+
+        if (menu && gnbNav) {
+            // 요소가 존재할 때만 addEventListener를 사용합니다.
+            menu.addEventListener("click", function () {
+                if (menu.classList.contains("on")) {
+                    // "on" 클래스가 있다면 gnbNav를 보이도록 설정하고 "on" 클래스를 제거합니다.
+                    gnbNav.classList.add("display_none");
+                    menu.classList.remove("on");
+                } else {
+                    // "on" 클래스가 없다면 gnbNav를 숨기도록 설정하고 "on" 클래스를 추가합니다.
+                    menu.classList.add("on");
+                    gnbNav.classList.remove("display_none");
+                }
+            });
+
+            // 창 크기가 변경될 때 이벤트를 감지하여 처리
+            window.addEventListener("resize", function () {
+                if (window.innerWidth > 1000) {
+                    menu.classList.remove("on");
+                    gnbNav.classList.remove("display_none");
+                } else {
+                    if (menu.classList.contains("on")) {
+                        // "on" 클래스가 있다면 gnbNav를 보이도록 설정하고 "on" 클래스를 제거합니다.
+                        gnbNav.classList.remove("display_none");
+                    } else {
+                        // "on" 클래스가 없다면 gnbNav를 숨기도록 설정하고 "on" 클래스를 추가합니다.
+                        gnbNav.classList.add("display_none");
+                    }
+                }
+            });
+
+            // 창 크기가 1000 미만인 경우
+            if (window.innerWidth < 1000) {
+                gnbNav.classList.add("display_none");
+            }
+        }
+    })
+
+    window.addEventListener('scroll', function () {
+        // 현재 스크롤 위치를 가져옵니다.
+        let scrollPosition = window.scrollY;
+        let menu = document.querySelector(".menu");
+        let gnbNav = document.querySelector(".gnb_nav_1");
+        // 만약 스크롤이 100px 이상으로 내려가면 body 요소에 클래스를 추가합니다.
+        if (scrollPosition > 100) {
+            document.body.classList.add('scrolled');
+            menu.classList.add("fixed-menu");
+            gnbNav.classList.add("fixed-menu");
+        } else {
+            document.body.classList.remove('scrolled');
+            menu.classList.remove("fixed-menu");
+            gnbNav.classList.remove("fixed-menu");
+        }
+    });
+</script>
+
+<header>
+    <nav>
+        <div class="head-top">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <div class="head-middle">
+            <h1>
+                <a href="./index.html">
+                    <img src="./resource/image/logo_web.png" alt="logo_web.png" style="width: 300px;">
+                </a>
+            </h1>
+
+            <div>
+                <form name="frm" method="get" action="./" onsubmit="">
+                    <div style="vertical-align:top; position:relative;">
+
+                        <input type="text" name="search_word" id="search_word" value="" class="search_box">
+
+                        <!-- GA4 입력을 위해 q 파라미터 추가 -->
+                        <input type="hidden" name="q" id="q" value="">
+                        <div style="position:absolute; top:2px; left:190px;">
+                            <input name="image" type="image" id="search_btn" src="./resource/image/search_btn.png"
+                                alt="검색하기" onfocus="this.blur();" style="padding: 8px;">
+                        </div>
+                    </div>
+                </form>
+                <!--search_part.html-->
+            </div>
+        </div>
+        <div class="head-bottom">
+            <ul class="gnb_nav gnb_nav_1">
+                <li class="">
+                    <a href="./resource/page_1/test.html">공연</a>
+                </li>
+                <li class="">
+                    <a href="./resource/page_2/test.html">전시</a>
+                </li>
+                <li class="">
+                    <a href="./resource/page_3/test.html">체험</a>
+                </li>
+                <li class="">
+                    <a href="./resource/page_4/test.html">키즈</a>
+                </li>
+                <li class="">
+                    <a href="./resource/page_5/test.html">클래스</a>
+                </li>
+                <li class="nav_divide">
+                    |
+                </li>
+                <li style="padding-right:7px;">
+                    <a href="https://timeticket.co.kr/section.php?&amp;page=promo&amp;type=timesale"
+                        style="color:#ff4b4b">
+                        타임세일
+                    </a>
+                </li>
+                <li>
+                    <a href="https://timeticket.co.kr/section.php?&amp;page=promo&amp;type=today" style="color:#318b14">
+                        오늘할인
+                    </a>
+                </li>
+                <li class="nav_divide">
+                    |
+                </li>
+                <li style="padding-right:10px;">
+                    <a href="https://timeticket.co.kr/ranking.php">
+                        랭킹
+                    </a>
+                </li>
+                <li>
+                    <a href="https://timeticket.co.kr/bbs_list.php?tb=talk_event">
+                        이벤트
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 반응형 메뉴 -->
+        <div class="menu">
+            <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
