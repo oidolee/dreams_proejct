@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스토브리그</title>
-
-    <link rel="stylesheet" href="./resource/css/common/reset.css">
+<link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
-    <link href="./resource/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" />
 
     <!-- swiper css-->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <link rel="stylesheet" href="./resource/css/common/common.css">
-    <link rel="stylesheet" href="./resource/css/common/header.css">
-    <link rel="stylesheet" href="./resource/css/common/footer.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css">
 
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="./resource/js/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.js"></script>
     <!-- swiper js-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
@@ -29,11 +21,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
-    <script src="./resource/js/common/header.js"></script>
+    <script src="../js/common/header.js"></script>
     <style>
         .container-box {
             padding: 0;
         }
+
+        input:focus {
+            outline: none;
+        }
+
 
         .center {
             max-width: 1240px;
@@ -66,79 +63,31 @@
         }
 
         /* 반응형 */
-        @media screen and (max-width:1280px) {
-            .footer-1 {
-                padding: 30px;
-            }
-
-            .section-1-bottom ul {
+        @media screen and (max-width:960px) {
+            .footer-1{padding: 30px;}
+            .section-1-bottom ul{
                 flex-direction: column;
             }
 
-            .footer-list-box {
+            .footer-list-box{
                 flex-direction: column;
             }
 
-            .footer-list-box .item-box ul {
-                justify-content: center;
-            }
-
-            .txt-add {
-                text-align: center;
-            }
+            .footer-list-box .item-box ul{justify-content: center;}
+            .txt-add{text-align: center;}
         }
 
         @media screen and (max-width:560px) {
-            .footer-1 {
-                font-size: 14px;
-            }
+            .footer-1{font-size: 14px;}
+            .footer-list-box{flex-direction: row;}
+            .link-list{flex-direction: column;}
+            .footer-list-box{flex-direction: column;}
+            .link-list{align-items: center;}
+        }   
 
-            .footer-list-box {
-                flex-direction: row;
-            }
-
-            .link-list {
-                flex-direction: column;
-            }
-
-            .footer-list-box {
-                flex-direction: column;
-            }
-
-            .link-list {
-                align-items: center;
-            }
+        #amenity-container {
+            margin: auto;
         }
-
-        /* swiper(슬라이더) */
-        swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .section-2-con{background-color: #efefef;}
-        .section-2-con .news-1{max-width: 1280px; margin: 0 auto;}
-        .section-2-con .news-1 .new-box{width: 280px;}
-        .section-2-con .news-1 .new-box img{width: 100%;}
-        .news-bottom-1{display: flex; justify-content: space-between;}
-        .news-bottom-1>li{transition: transform 0.2s ease;}
-        .news-bottom-1>li:hover{transform: scale(1.05); }
     </style>
 </head>
 <div class="wrap">
@@ -177,15 +126,15 @@
                 <div class="header-bottom">
                     <nav>
                         <h2>
-                            <a href="./index.html">
-                                <img src="./resource/image/logoSmall.png" style="width: 100%;" alt="logoSmall">
+                            <a href="../../index.html">
+                                <img src="../image/logoSmall.png" style="width: 100%;" alt="logoSmall">
                             </a>
                         </h2>
                         <ul id="menu_box" class="menu-box">
                             <li>
-                                <a href="#">DREAMS</a>
+                                <a href="../page_1/test.html">DREAMS</a>
                                 <ul class="menu-son display-none">
-                                    <li><a href="./resource/page_1/test.html">드림즈 소개</a></li>
+                                    <li><a href="#">드림즈 소개</a></li>
                                     <li><a href="#">구장안내</a></li>
                                 </ul>
                             </li>
@@ -240,7 +189,7 @@
                             <li>
                                 <a href="#">DREAMS</a>
                                 <ul class="menu-son">
-                                    <li><a href="./resource/page_1/test.html">드림즈 소개</a></li>
+                                    <li><a href="#">드림즈 소개</a></li>
                                     <li><a href="#">구장안내</a></li>
                                 </ul>
                             </li>
@@ -307,85 +256,186 @@
 
         <div class="slider-con">
             <div class="slider-box">
-                <!-- <img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"> -->
-                <swiper-container class="mySwiper" pagination="true">
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_01.jpg" alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_02.jpg" alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_03.jpg" alt="main"></swiper-slide>
-                    
-                </swiper-container>
+                <img style="width: 100%;"
+                    src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg"
+                    alt="main">
             </div>
         </div>
+
         <section class="section-1-con">
             <div class="section-1 center">
                 <div class="section-1-top">
-                    <h2><a href="#">드림즈 바로가기</a></h2>
+                    <h2>편의시설</h2>
                 </div>
                 <div class="section-1-bottom">
-                    <ul>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item1.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item2.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item3.png"
-                                    alt=""></a></li>
+                    <ul class="tabBorder stadium">
+                        <li><a href="#" class="on">고척 스카이돔</a></li>
+                        <li><a href="#">편의시설</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li><a href="#">주차안내</a></li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section-2-con">
-            <div class="news-1">
-                <div class="news-title">
-                    <h3>드림즈 구단 소식</h3>
-                    <a href="/story/heroesNews/list.do">더보기</a>
+                <div class="section-2-bottom">
+                    <div class="skydome">
+                        <div style ="text-align:center";>
+                            <h4><img src="https://www.heroesbaseball.co.kr/files/facilities.1/2023/03/08/08feb124-8971-4621-ac75-f4415d552250.jpg" alt="편의시설" ></h4>
+                            
+                        </div>
+                    </div>
                 </div>
-                <ul class="news-bottom-1">
+            </div>
+            <div id="amenity-container">
+                <ul>
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
-                            </div>
-                        </a>
+                        <strong>1.피자</strong>
+                        <span class="text">불고기 ,페페로니 피자</span>
+                        <span class="location">2번 통로 맞은편</span>
+                        <div id="photoDetailList_40" style="display:none"></div>
                     </li>
+                    
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
-                            </div>
-                        </a>
+                        <strong>2.편의점</strong>
+                        <span class="text">캔맥주,음료,각종 스낵,마른 안주</span>
+                        <span class="location"> 2번 통로 맞은편</span>
+                        <div id="photoDetailList_36" style="display:none"></div>
                     </li>
+                    
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
-                            </div>
-                        </a>
+                        <strong>3.닭꼬치,새우튀김</strong>
+                        <span class="text">닭꼬치,크림 새우,생맥주</span>
+                        <span class="location">4번 통로 맞은편</span>
+                        <div id="photoDetailList_78" style="display:none"></div>
                     </li>
+                    
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
-                            </div>
-                        </a>
+                        <strong>4.편밀밀</strong>
+                        <span class="text">만두라자냐,만두고로케,체다치즈멘보샤</span>
+                        <span class="location">4번 통로 맞은편</span>
+                        <div id="photoDetailList_79" style="display:none"></div>
                     </li>
-
+                    
+                    <li>
+                        <strong>7.히어로즈 용품점</strong>
+                        <span class="text">선수 레플리카,모자,응원도구</span>
+                        <span class="location">7번 통로 맞은편</span>
+                        <div id="photoDetailList_80" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>8.원정용품점</strong>
+                        <span class="text">선수 레플리카, 모자, 응원도구</span>
+                        <span class="location">7번 통로 맞은편</span>
+                        <div id="photoDetailList_81" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>9.피자</strong>
+                        <span class="text">불고기,페페로니 피자</span>
+                        <span class="location">8번 통로 맞은편</span>
+                        
+                        <div id="photoDetailList_82" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>10.올떡볶이</strong>
+                        <span class="text">떡볶이,어묵,순대</span>
+                        <span class="location">9번 통로 맞은편</span>
+                        <div id="photoDetailList_28" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>11.편의점</strong>
+                        <span class="text">캔맥주,음료,각종 스낵,마른 안주</span>
+                        <span class="location">11번 통로 맞은편</span>
+                        <div id="photoDetailList_83" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>12.스테프핫도그</strong>
+                        <span class="text">스테프핫도그,메디스터 소시지</span>
+                        <span class="location">11번 통로 맞은편</span>
+                        <div id="photoDetailList_30" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>13.맘스터치</strong>
+                        <span class="text">싸이버거,불싸이버거,불고기버거</span>
+                        <span class="location">3-4번 통로 사이</span>
+                        <div id="photoDetailList_93" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>13.BBQ</strong>
+                        <span class="text">핫윙,파더스 치킨,황금 치즈볼</span>
+                        <span class="location">3~4번 통로 사이</span>
+                        <div id="photoDetailList_84" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>14.올떡볶이</strong>
+                        <span class="text">떡볶이,어묵,순대</span>
+                        <span class="location">3~4번 통로 사이</span>
+                        <div id="photoDetailList_85" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>15.탐앤탐스</strong>
+                        <span class="text">아메리카노,스무디</span>
+                        <span class="location">3-4번 통로 사이</span>
+                        <div id="photoDetailList_29" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>16.스테프 핫도그</strong>
+                        <span class="text">스테프 핫도그,메디스터 소시지</span>
+                        <span class="location">3-4번 통로 사이</span>
+                        <div id="photoDetailList_92" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>17.BHC(가판)</strong>
+                        <span class="text">순살 뿌링클,바삭클 치즈볼,뿌링 핫도그</span>
+                        <span class="location">5번, 9번 통로 맞은편</span>
+                        <div id="photoDetailList_75" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>18.마왕족발</strong>
+                        <span class="text">족발 도시락,족발 만두</span>
+                        <span class="location">9~10번 통로 사이</span>
+                        <div id="photoDetailList_86" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>19.맘스터치</strong>
+                        <span class="text">싸이버거,불싸이버거,불고기버거</span>
+                        <span class="location">9~10번 통로 사이</span>
+                        <div id="photoDetailList_94" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>19.BBQ</strong>
+                        <span class="text">핫윙,파더스 치킨,황금 치즈볼</span>
+                        <span class="location">9~10번 통로 사이</span>
+                        <div id="photoDetailList_87" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>20.투다리</strong>
+                        <span class="text">닭꼬치,야끼 교자 만두,회오리 감자</span>
+                        <span class="location">9-10번 통로 사이</span>
+                        <div id="photoDetailList_33" style="display:none"></div>
+                    </li>
+                    
+                    <li>
+                        <strong>21.탐앤탐스</strong>
+                        <span class="text">아메리카노,스무디</span>
+                        <span class="location">9~10번 통로 사이</span>
+                        <div id="photoDetailList_88" style="display:none"></div>
+                    </li>
                 </ul>
             </div>
-            <div class="news-2">
-                <div class="news-title"></div>
-            </div>
+
         </section>
 
         <footer>
