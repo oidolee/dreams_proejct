@@ -131,6 +131,14 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .section-2-con{background-color: #efefef;}
+        .section-2-con .news-1{max-width: 1280px; margin: 0 auto;}
+        .section-2-con .news-1 .new-box{width: 280px;}
+        .section-2-con .news-1 .new-box img{width: 100%;}
+        .news-bottom-1{display: flex; justify-content: space-between;}
+        .news-bottom-1>li{transition: transform 0.2s ease;}
+        .news-bottom-1>li:hover{transform: scale(1.05); }
     </style>
 </head>
 <div class="wrap">
@@ -301,19 +309,13 @@
             <div class="slider-box">
                 <!-- <img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"> -->
                 <swiper-container class="mySwiper" pagination="true">
-                    <swiper-slide><img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"></swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
-                    <swiper-slide>Slide 4</swiper-slide>
-                    <swiper-slide>Slide 5</swiper-slide>
-                    <swiper-slide>Slide 6</swiper-slide>
-                    <swiper-slide>Slide 7</swiper-slide>
-                    <swiper-slide>Slide 8</swiper-slide>
-                    <swiper-slide>Slide 9</swiper-slide>
-                    </swiper-container>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_01.jpg" alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_02.jpg" alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_03.jpg" alt="main"></swiper-slide>
+                    
+                </swiper-container>
             </div>
         </div>
-
         <section class="section-1-con">
             <div class="section-1 center">
                 <div class="section-1-top">
@@ -332,6 +334,57 @@
                                     alt=""></a></li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="section-2-con">
+            <div class="news-1">
+                <div class="news-title">
+                    <h3>드림즈 구단 소식</h3>
+                    <a href="/story/heroesNews/list.do">더보기</a>
+                </div>
+                <ul class="news-bottom-1">
+                    <li>
+                        <a href="#">
+                            <div class="new-box">
+                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
+                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <p>2023-12-13</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="new-box">
+                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
+                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <p>2023-12-13</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="new-box">
+                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
+                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <p>2023-12-13</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="new-box">
+                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
+                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <p>2023-12-13</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="news-2">
+                <div class="news-title"></div>
             </div>
         </section>
 
