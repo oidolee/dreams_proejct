@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스토브리그 page2</title>
+    <title>스토브리그</title>
 
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -72,26 +72,104 @@
 
         /* 반응형 */
         @media screen and (max-width:960px) {
-            .footer-1{padding: 30px;}
-            .section-1-bottom ul{
+            .footer-1 {
+                padding: 30px;
+            }
+
+            .section-1-bottom ul {
                 flex-direction: column;
             }
 
-            .footer-list-box{
+            .footer-list-box {
                 flex-direction: column;
             }
 
-            .footer-list-box .item-box ul{justify-content: center;}
-            .txt-add{text-align: center;}
+            .footer-list-box .item-box ul {
+                justify-content: center;
+            }
+
+            .txt-add {
+                text-align: center;
+            }
         }
 
         @media screen and (max-width:560px) {
-            .footer-1{font-size: 14px;}
-            .footer-list-box{flex-direction: row;}
-            .link-list{flex-direction: column;}
-            .footer-list-box{flex-direction: column;}
-            .link-list{align-items: center;}
-        }   
+            .footer-1 {
+                font-size: 14px;
+            }
+
+            .footer-list-box {
+                flex-direction: row;
+            }
+
+            .link-list {
+                flex-direction: column;
+            }
+
+            .footer-list-box {
+                flex-direction: column;
+            }
+
+            .link-list {
+                align-items: center;
+            }
+        }
+        #ticket-box{
+            position: relative;
+            width: 300px;
+            /* margin: 0 auto; */
+            padding-bottom: 160px;
+            z-index: 2;
+        }
+        
+        div.local {
+            float: left;
+            margin-top: -38px;
+            width: 240px;
+        }
+        .body1{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .haschild{
+            border-bottom: 1px solid whitesmoke;
+        }
+        .membership-info > h1{
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            color: #000 !important;
+        }
+
+        .center1, h1{
+            display: flex;
+            color: #000 !important;
+            justify-content: center;
+            width: 700px;
+        }
+        .center1 table{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            border: 1px solid black;
+            border-top: 3px solid black;
+            border-bottom: 2px solid black;
+            width: 700px;
+        }
+        table td{
+            border: 1px solid black;
+            
+            
+        }
+        table thead{
+            background: whitesmoke;
+            text-align: center;
+        }
+        h{
+            color: #1c5c50 !important;
+        }
 
     </style>
 </head>
@@ -121,7 +199,7 @@
                                     </a></li>
                                 <li><a href="#">
                                         <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns3.png"
-                                            alt="facebokk">
+                                            alt="facebook">
                                     </a></li>
 
                             </ul>
@@ -266,27 +344,159 @@
                     alt="main">
             </div>
         </div>
-
-        <section class="section-1-con">
-            <div class="section-1 center">
-                <div class="section-1-top">
-                    <h2><a href="#">드림즈 바로가기</a></h2>
+        <!-- 중간 시작 -->
+        
+        <div class="body1">
+            <div id="ticket-box">
+                <div>
+                    <h2>TICKET</h2>
                 </div>
-                <div class="section-1-bottom">
-                    <ul>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item1.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item2.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item3.png"
-                                    alt=""></a></li>
-                    </ul>
-                </div>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">일일티켓</a>
+                        <ul>
+                            <li><a href="입장요금 작성중.html">입장요금</a></li>
+                            <li><a href="예매안내 작성중.html">예매안내</a></li>
+                            <li><a href="할인안내 작성중.html">할인안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">멤버쉽</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="DreamsMembership.html" class="on">드림즈멤버쉽</a>
+                            </li>
+                            <li>
+                                <a href="childrenMembership.html" class="on">듬린이(어린이 회원)</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">단체관람</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="groupViewing.html" class="on">안내</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">스카이박스</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="스카이박스 작성중.html" class="on">소개 / 예약</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
             </div>
-        </section>
+            
+            <div class="membership-info">
+                <div class="center1">
+                    <h1 style="margin-top: 50px;">듬린이(어린이 회원)</h1>
+                </div>
+                <h6 style="color: #1c5c50  !important; margin-top: 50px; " >1. 히어로 멤버쉽 안내</h6>
+                <table >
+                    <thead >
+                        <tr>
+                            <td>구분</td>
+                            <td>내용</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>가입 금액</td>
+                            <td>65,000원</td>
+                        </tr>
+                        <tr>
+                            <td>사용 기간</td>
+                            <td>2023 KBO정규리그 마지막 홈경기까지</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6 style="margin-top: 50px;">2. 듬린이(어린이 회원) 멤버십 가입 상품</h6>
+                <table style="text-align: center;">
+                    <thead >
+                        <tr>
+                            <td colspan="3">듬린이 패키지 상품</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: whitesmoke; text-align: center;">
+                            <td width="150px">상품명</td>
+                            <td width="279px">소비자가</td>
+                            <td>회원가</td>
+                        </tr>
+                       
+                        <tr>
+                            <td>스프링 노트 + 펜</td>
+                            <td rowspan="5">약 100,000원</td>
+                            <td rowspan="5">80,000원</td>
+                        </tr>
+                        <tr>
+                            <td>텀블러</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>유니폼뱃지 4종</td>
+                        </tr>
+                        <tr>
+                            <td>드림즈 스케줄러</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6 style="margin-top: 50px;">3. 듬린이(어린이 회원) 멤버십 가입 혜택</h6>
+                <ul style="margin-bottom: 50px;">
+                    <li>
+                        1) 약 100,000원 상당의 패키지 상품 제공
+                    </li>
+                    <li>2) 회원 본인 고척스카이돔 외야 일반석 무료입장
+                        <ul>
+                            <li style="font-size: 12px;">- 입장 시 어린이회원 카드를 반드시 제시하여야 합니다.</li>
+                        </ul>
+                    </li>
+                    <li>3)회원 본인 KBO리그 전 구장 외야 비지정석 무료 입장
+                        <ul>
+                            <li style="font-size: 12px;">- 방문 구장 상황에 따라 혜택이 제한 또는 취소될 수 있습니다.</li>
+                            <li style="font-size: 12px;">- 입장 시 어린이회원 카드를 반드시 제시하여야 합니다.</li>
+                        </ul>
+                    </li>
+                    <li>4)주중 버건디석 할인권 (10매)
+                        <ul>
+                            <li style="font-size: 12px;">- 구매가: 성인 6,000원, 어린이 4,000원</li>
+                            <li style="font-size: 12px;">- 2023시즌 고척스키이돔 주중 홈 경기에 한하여 사용 가능합니다.</li>
+                            <li style="font-size: 12px;">- 회원 카드와 함께 할인권을 제시해주시기 바랍니다. (할인권 미지참 시 차액 지불)</li>
+                        </ul>
+                    </li>
+                    <li>5)오프라인 상품샵 5% 할인</li>
+                </ul>
+                <h6> 4. 유의사항</h6>
+                <ul style="margin-bottom: 50px;">
+                    <li>- 모든 멤버십 혜택은 2023 KBO리그 정규시즌 키움히어로즈 고척스카이돔 홈 경기에 한하여 사용 가능합니다. <br>
+                        (시범경기,포스트시즌 사용 불가)</li>
+                    <li>- 어린이회원권 양도 및 대여는 불가합니다.</li>
+                    <li>- 멤버십 양도 및 대여는 불가합니다</li>
+                    <li>- 회원카드 분실 시 재발급 비용이 발생하며, 분실에 따른 불이익이 발생할 수 있으니 주의 바랍니다. <br>
+                        (재발급 1회만 가능)</li>
+                    <li>- 배송 받으실 주소 정보를 정확하게 입력해주시기 바랍니다.</li>
+                    <li>- 멤버십 혜택 및 이벤트는 구단 사정에 의해 내용이 변경될 수 있습니다.</li>
+                    <li>- 가입 취소는 멤버십 모집 기간 내에만 가능하며, 모집 기간 이후로는 취소가 불가합니다.</li>
+                </ul>
+            <h6> 5. 가입 및 배송 문의</h6>
+                <ul style="margin-bottom: 100px;">
+                    <li>- 인터파크<a href="http://ticket.interpark.com"> http://ticket.interpark.com</a></li>
+                    <li>- 인터파크 티켓 고객센터 1544-1555 (스포츠 2번)<br>
+                          (상담가능시간: 연중무휴 9시~18시)</li>
+                    <li>- 이벤트 및 할인권 관련 문의는 구단으로 연락바랍니다.(02-3660-1000)</li>
+                </ul>
+            </div>
+        </div>
 
         <footer>
             <div class="footer-1 center">
