@@ -35,11 +35,6 @@
             padding: 0;
         }
 
-        input:focus {
-            outline: none;
-        }
-
-
         .center {
             max-width: 1240px;
             margin: 0 auto;
@@ -71,28 +66,71 @@
         }
 
         /* 반응형 */
-        @media screen and (max-width:960px) {
-            .footer-1{padding: 30px;}
-            .section-1-bottom ul{
+        @media screen and (max-width:1280px) {
+            .footer-1 {
+                padding: 30px;
+            }
+
+            .section-1-bottom ul {
                 flex-direction: column;
             }
 
-            .footer-list-box{
+            .footer-list-box {
                 flex-direction: column;
             }
 
-            .footer-list-box .item-box ul{justify-content: center;}
-            .txt-add{text-align: center;}
+            .footer-list-box .item-box ul {
+                justify-content: center;
+            }
+
+            .txt-add {
+                text-align: center;
+            }
         }
 
         @media screen and (max-width:560px) {
-            .footer-1{font-size: 14px;}
-            .footer-list-box{flex-direction: row;}
-            .link-list{flex-direction: column;}
-            .footer-list-box{flex-direction: column;}
-            .link-list{align-items: center;}
-        }   
+            .footer-1 {
+                font-size: 14px;
+            }
 
+            .footer-list-box {
+                flex-direction: row;
+            }
+
+            .link-list {
+                flex-direction: column;
+            }
+
+            .footer-list-box {
+                flex-direction: column;
+            }
+
+            .link-list {
+                align-items: center;
+            }
+        }
+
+        /* swiper(슬라이더) */
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <div class="wrap">
@@ -261,9 +299,18 @@
 
         <div class="slider-con">
             <div class="slider-box">
-                <img style="width: 100%;"
-                    src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg"
-                    alt="main">
+                <!-- <img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"> -->
+                <swiper-container class="mySwiper" pagination="true">
+                    <swiper-slide><img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"></swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+                    <swiper-slide>Slide 4</swiper-slide>
+                    <swiper-slide>Slide 5</swiper-slide>
+                    <swiper-slide>Slide 6</swiper-slide>
+                    <swiper-slide>Slide 7</swiper-slide>
+                    <swiper-slide>Slide 8</swiper-slide>
+                    <swiper-slide>Slide 9</swiper-slide>
+                    </swiper-container>
             </div>
         </div>
 
