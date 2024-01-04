@@ -42,19 +42,12 @@
       height: 100%;
       object-fit: cover;
     }
-
-    /* Add the following styles for navigation arrows */
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #fff; /* Set the color to white */
-    }
   </style>
 </head>
 
 <body>
 
-  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
-    slides-per-view="5.5" navigation>
+  <swiper-container class="mySwiper" pagination="true">
     <swiper-slide>Slide 1</swiper-slide>
     <swiper-slide>Slide 2</swiper-slide>
     <swiper-slide>Slide 3</swiper-slide>
@@ -64,13 +57,9 @@
     <swiper-slide>Slide 7</swiper-slide>
     <swiper-slide>Slide 8</swiper-slide>
     <swiper-slide>Slide 9</swiper-slide>
-    <!-- Add more slides as needed -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </swiper-container>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
 </body>
 
 </html>
