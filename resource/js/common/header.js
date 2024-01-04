@@ -1,43 +1,43 @@
-window.addEventListener("DOMContentLoaded",function(){
+window.addEventListener("DOMContentLoaded", function () {
    let menuBox = document.querySelector('#menu_box');
    let menuSon = document.querySelectorAll('#menu_box>li ul');
    let menu_bg = document.querySelector('#menu_bg');
-   
-   menuBox.addEventListener("mouseover",function(){
-    menuSon.forEach(ele => {
-       ele.classList.remove("display-none");    
-    });
 
-    menu_bg.classList.remove("display-none");    
+   menuBox.addEventListener("mouseover", function () {
+      menuSon.forEach(ele => {
+         ele.classList.remove("display-none");
+      });
+
+      menu_bg.classList.remove("display-none");
    })
 
-   menu_bg.addEventListener("mouseover",function(){
-    menuSon.forEach(ele => {
-         ele.classList.remove("display-none");    
-    });
- 
-    menu_bg.classList.remove("display-none");
+   menu_bg.addEventListener("mouseover", function () {
+      menuSon.forEach(ele => {
+         ele.classList.remove("display-none");
+      });
+
+      menu_bg.classList.remove("display-none");
    })
 
-   menuBox.addEventListener("mouseout",function(){
-    menuSon.forEach(ele => {
-        ele.classList.add("display-none");    
-   });
-    menu_bg.classList.add("display-none");
+   menuBox.addEventListener("mouseout", function () {
+      menuSon.forEach(ele => {
+         ele.classList.add("display-none");
+      });
+      menu_bg.classList.add("display-none");
    })
 
 
-   menu_bg.addEventListener("mouseout",function(){
-    menuSon.forEach(ele => {
-        ele.classList.add("display-none");    
-   });
-    menu_bg.classList.add("display-none");
+   menu_bg.addEventListener("mouseout", function () {
+      menuSon.forEach(ele => {
+         ele.classList.add("display-none");
+      });
+      menu_bg.classList.add("display-none");
    })
 })
 
-$(function(){
+$(function () {
    let moMenuBox = $("#mo-menu-box");
-   let moMenuBoxLi =  $("#mo-menu-box>li");
+   let moMenuBoxLi = $("#mo-menu-box>li");
    let icon = $("#icon");
    let leftBg = $("#left-bg");
    let sonMenuBg = $("#son-menu-bg");
@@ -45,44 +45,40 @@ $(function(){
    leftBg.hide();
    sonMenuBg.hide();
 
-   if ($(window).width() <= 960) {
-      // Your code for window width less than or equal to 960
+   // Your code for window width less than or equal to 960
 
-      moMenuBoxLi.each(function(idx, ele) {
-         let menuSon = $(ele).find(".menu-son");
-         menuSon.hide();
-     
-         $(ele).on("click", function() {
-            moMenuBoxLi.each(function(idx_1, ele_1) {
-               let menuSon_1 = $(ele_1).find(".menu-son");
-               menuSon_1.hide();
-            });
-             // 클릭한 요소의 .menu-son 토글
-             menuSon.toggle();
+   moMenuBoxLi.each(function (idx, ele) {
+      let menuSon = $(ele).find(".menu-son");
+      menuSon.hide();
+
+      $(ele).on("click", function () {
+         moMenuBoxLi.each(function (idx_1, ele_1) {
+            let menuSon_1 = $(ele_1).find(".menu-son");
+            menuSon_1.hide();
          });
-     });
-     
-
-      // sonMenuBg.hide();
-      icon.on("click", function () {
-         moMenuBox.toggle();
-         sonMenuBg.toggle();
-         leftBg.toggle();
+         // 클릭한 요소의 .menu-son 토글
+         menuSon.toggle();
       });
-  }
+   });
 
-  // Check window width on window resize
-  $(window).resize(function () {
+
+   // sonMenuBg.hide();
+   icon.on("click", function () {
+      moMenuBox.toggle();
+      sonMenuBg.toggle();
+      leftBg.toggle();
+   });
+
+   // Check window width on window resize
+   $(window).resize(function () {
       if ($(window).width() <= 960) {
-         moMenuBox.hide();
-         leftBg.hide();
-         sonMenuBg.hide();
-      } else {
-        
-      }
-  });
+         // moMenuBox.hide();
+         // leftBg.hide();
+         // sonMenuBg.hide();
+      } 
+   });
 
-   
+
 });
 
 
