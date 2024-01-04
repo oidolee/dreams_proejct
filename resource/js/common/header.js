@@ -45,8 +45,6 @@ $(function () {
    leftBg.hide();
    sonMenuBg.hide();
 
-   // Your code for window width less than or equal to 960
-
    moMenuBoxLi.each(function (idx, ele) {
       let menuSon = $(ele).find(".menu-son");
       menuSon.hide();
@@ -61,8 +59,6 @@ $(function () {
       });
    });
 
-
-   // sonMenuBg.hide();
    icon.on("click", function () {
       moMenuBox.toggle();
       sonMenuBg.toggle();
@@ -71,14 +67,10 @@ $(function () {
 
    // Check window width on window resize
    $(window).resize(function () {
-      if ($(window).width() <= 960) {
-         // moMenuBox.hide();
-         // leftBg.hide();
-         // sonMenuBg.hide();
-      } 
+      moMenuBox.hide();
+      leftBg.hide();
+      sonMenuBg.hide();
    });
-
-
 });
 
 
