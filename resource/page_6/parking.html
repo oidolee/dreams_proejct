@@ -27,40 +27,7 @@
             padding: 0;
         }
 
-        input:focus {
-            outline: none;
-        }
-
-
-        .center {
-            max-width: 1240px;
-            margin: 0 auto;
-        }
-
-        .section-1-con {
-            min-height: 440px;
-        }
-
-        .section-1 {
-            height: 100%;
-            padding: 80px 0;
-        }
-
-        .section-1-top h2 {
-            text-align: center;
-        }
-
-        .section-1-top h2 a {
-            color: #000 !important;
-        }
-
-        .section-1-bottom ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            padding-left: 0;
-        }
+         
 
         /* 반응형 */
         @media screen and (max-width:960px) {
@@ -86,11 +53,46 @@
         }   
 
         /*  */
+        #amenity-container {
+            margin: auto;
+        }
+
+        .amenity-contents {
+            text-align: center;
+        }
+
+        .stadium-tab li {
+           
+           list-style: none;
+           display: inline-flex;
+           width: 150px;
+           font-weight: bold;
+        }
+
+        .stadium-tab .menuLink:hover {
+            color: black !important;
+            
+        }
+
+
         #parking-container {
             margin: auto;
             text-align: center;
+            vertical-align: auto;
+            padding: 5px;
+            
         }
-	}
+
+        #parking-container th, td {
+            border: 1px solid black;
+        }
+        
+        .table {
+            text-align: center;
+            vertical-align: auto;
+            border: 1px solid;
+        }
+
 
     </style>
 </head>
@@ -265,98 +267,98 @@
                     alt="main">
             </div>
         </div>
+        
+        <div class="amenity-contents">
+            <h2><br><br>주차안내</h2><br>
+            <ul class="stadium-tab">
+                <li><a class="menuLink" href="./stadium.html">고척 스카이돔</a></li>
+                <li><a class="menuLink" href="./amenity.html">편의시설</a></li>
+                <li><a class="menuLink" href="./location.html">찾아오시는 길</a></li>
+                <li><a class="menuLink" href="./parking.html">주차안내</a></li>
+            </ul><br>
 
-        <section class="section-1-con">
-            <div class="section-1 center">
-                <div class="section-1-top">
-                    <h2>주차안내</h2>
-                </div>
-                <div class="section-1-bottom">
-                    <ul class="tabBorder stadium">
-                        <li><a href="#" class="on">고척 스카이돔</a></li>
-                        <li><a href="#">편의시설</a></li>
-                        <li><a href="#">찾아오시는 길</a></li>
-                        <li><a href="#">주차안내</a></li>
-                    </ul>
-                </div>
-                <div class="section-2-bottom">
-                    <div class="skydome">
-                        <div style ="text-align:center";>
-                            <h4><img src="https://heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficParking_230320.png" alt="주차안내" ></h4>
-                            
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h4><img src="https://heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficParking_230320.png" alt="주차안내" ></h4>
             </div>
-            <table border="1" width="1000" align="center" id="parking-container">
-                
-                    <thead>
-                        <tr>
-                            <th>구분</th>
-                            <th>위치<br>(주소)</th>
-                            <th>거리<br>돔<->주차장</th>
-                            <th>운영시간</th>
-                            <th>이용요금</th>
-                            <th>주차면수</th>
-                            <th>주차장 진입방면 위치</th>
-                        </tr>		
-                    </thead>
-                    
-                
-                    <tbody>
-                        <tr>
-                            <td>고척산업용품<br>종합상가</td>
-                            <td>서울시 구로구<br>중앙로3길 50</td>
-                            <td>800m<br>(도보10분)</td>
-                            <td>24시간</td>
-                            <td>30분<hr>1,000원</td>
-                            <td>약1,000면</td>
-                            <td>인천 방면에서<br>오시는분</td>
-
-                        </tr>
-                        <tr>
-                            <td>중앙<br>유통단지</td>
-                            <td>서울시 구로구<br>경인로 53길 15</td>
-                            <td>700m<br>(도보10분)</td>
-                            <td>24시간</td>
-                            <td>30분<hr>1,000원</td>
-                            <td>약4,000면</td>
-                            <td>서울 방면에서<br>오시는분</td>
-                        </tr>
-                        <tr>
-                            <td>구로기계<br>공구상가</td>
-                            <td>서울시 구로구<br>구로중앙로 198</td>
-                            <td>1,300m<br>(도보15분)</td>
-                            <td>24시간</td>
-                            <td>30분<hr>1,000원</td>
-                            <td>약4,000면</td>
-                            <td>서울 방면에서<br>오시는분</td>
-                        </tr>
-                        <tr>
-                            <td>동양미래<br>대학교</td>
-                            <td>서울시 구로구<br>경인로 445</td>
-                            <td>50m<br>(도보3분)</td>
-                            <td>08:00 ~<br>23:00</td>
-                            <td>1시간<hr>3,000원</td>
-                            <td>약320면</td>
-                            <td>서울 방면에서<br>오시는분</td>	
-                        </tr>
-                        <tr>
-                            <td>아이파크몰<br>고척점</td>
-                            <td>서울시 구로구<br>경인로 43길 49</td>
-                            <td>1,000m<br>(도보13분)</td>
-                            <td>24시간</td>
-                            <td>10분<hr>1,000원</td>
-                            <td>약380면</td>
-                            <td>서울 방면에서<br>오시는분</td>	
-                        </tr>
-                    </tbody>
-                    
-                
-                </table>
+        </div>
+        <br>
+        <br>
 
 
-        </section>
+        
+        <table class="table table-striped">
+            
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>위치<br>(주소)</th>
+                        <th>거리<br>돔<->주차장</th>
+                        <th>운영시간</th>
+                        <th>이용요금</th>
+                        <th>주차면수</th>
+                        <th>주차장 진입방면 위치</th>
+                    </tr>		
+                </thead>
+                
+            
+                <tbody>
+                    <tr>
+                        <td>고척산업용품<br>종합상가</td>
+                        <td>서울시 구로구<br>중앙로3길 50</td>
+                        <td>800m<br>(도보10분)</td>
+                        <td>24시간</td>
+                        <td>30분<hr>1,000원</td>
+                        <td>약1,000면</td>
+                        <td>인천 방면에서<br>오시는분</td>
+
+                    </tr>
+                    <tr>
+                        <td>중앙<br>유통단지</td>
+                        <td>서울시 구로구<br>경인로 53길 15</td>
+                        <td>700m<br>(도보10분)</td>
+                        <td>24시간</td>
+                        <td>30분<hr>1,000원</td>
+                        <td>약4,000면</td>
+                        <td>서울 방면에서<br>오시는분</td>
+                    </tr>
+                    <tr>
+                        <td>구로기계<br>공구상가</td>
+                        <td>서울시 구로구<br>구로중앙로 198</td>
+                        <td>1,300m<br>(도보15분)</td>
+                        <td>24시간</td>
+                        <td>30분<hr>1,000원</td>
+                        <td>약4,000면</td>
+                        <td>서울 방면에서<br>오시는분</td>
+                    </tr>
+                    <tr>
+                        <td>동양미래<br>대학교</td>
+                        <td>서울시 구로구<br>경인로 445</td>
+                        <td>50m<br>(도보3분)</td>
+                        <td>08:00 ~<br>23:00</td>
+                        <td>1시간<hr>3,000원</td>
+                        <td>약320면</td>
+                        <td>서울 방면에서<br>오시는분</td>	
+                    </tr>
+                    <tr>
+                        <td>아이파크몰<br>고척점</td>
+                        <td>서울시 구로구<br>경인로 43길 49</td>
+                        <td>1,000m<br>(도보13분)</td>
+                        <td>24시간</td>
+                        <td>10분<hr>1,000원</td>
+                        <td>약380면</td>
+                        <td>서울 방면에서<br>오시는분</td>	
+                    </tr>
+                </tbody>
+                
+            
+            </table><br><br><br>
+
+
+
+            
+
+
+      
 
         <footer>
             <div class="footer-1 center">

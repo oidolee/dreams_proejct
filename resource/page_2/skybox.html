@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스토브리그 page1</title>
+    <title>스토브리그</title>
 
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -72,26 +72,104 @@
 
         /* 반응형 */
         @media screen and (max-width:960px) {
-            .footer-1{padding: 30px;}
-            .section-1-bottom ul{
+            .footer-1 {
+                padding: 30px;
+            }
+
+            .section-1-bottom ul {
                 flex-direction: column;
             }
 
-            .footer-list-box{
+            .footer-list-box {
                 flex-direction: column;
             }
 
-            .footer-list-box .item-box ul{justify-content: center;}
-            .txt-add{text-align: center;}
+            .footer-list-box .item-box ul {
+                justify-content: center;
+            }
+
+            .txt-add {
+                text-align: center;
+            }
         }
 
         @media screen and (max-width:560px) {
-            .footer-1{font-size: 14px;}
-            .footer-list-box{flex-direction: row;}
-            .link-list{flex-direction: column;}
-            .footer-list-box{flex-direction: column;}
-            .link-list{align-items: center;}
-        }   
+            .footer-1 {
+                font-size: 14px;
+            }
+
+            .footer-list-box {
+                flex-direction: row;
+            }
+
+            .link-list {
+                flex-direction: column;
+            }
+
+            .footer-list-box {
+                flex-direction: column;
+            }
+
+            .link-list {
+                align-items: center;
+            }
+        }
+        #ticket-box{
+            position: relative;
+            width: 300px;
+            /* margin: 0 auto; */
+            padding-bottom: 160px;
+            z-index: 2;
+        }
+        
+        div.local {
+            float: left;
+            margin-top: -38px;
+            width: 240px;
+        }
+        .body1{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .haschild{
+            border-bottom: 1px solid whitesmoke !important;
+        }
+        .membership-info > h1{
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            color: #000 !important;
+        }
+
+        .center1, h1{
+            display: flex;
+            color: #000 !important;
+            justify-content: center;
+            width: 700px;
+        }
+        .center1 table{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            border: 1px solid black;
+            border-top: 3px solid black;
+            border-bottom: 2px solid black;
+            width: 700px;
+        }
+        table td{
+            border: 1px solid black;
+            
+            
+        }
+        table thead{
+            background: whitesmoke;
+            text-align: center;
+        }
+        h{
+            color: #1c5c50 !important;
+        }
 
     </style>
 </head>
@@ -121,7 +199,7 @@
                                     </a></li>
                                 <li><a href="#">
                                         <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns3.png"
-                                            alt="facebokk">
+                                            alt="facebook">
                                     </a></li>
 
                             </ul>
@@ -180,12 +258,12 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">TICKET</a>
+                                <a href="ticketFee.html">TICKET</a>
                                 <ul class="menu-son display-none">
-                                    <li><a href="#">일일티켓</a></li>
-                                    <li><a href="#">멤버쉽</a></li>
-                                    <li><a href="#">단체관람</a></li>
-                                    <li><a href="#">스카이박스</a></li>
+                                    <li><a href="ticketFee.html">일일티켓</a></li>
+                                    <li><a href="DreamsMembership.html">멤버쉽</a></li>
+                                    <li><a href="groupViewing.html">단체관람</a></li>
+                                    <li><a href="skybox.html">스카이박스</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -266,27 +344,121 @@
                     alt="main">
             </div>
         </div>
-
-        <section class="section-1-con">
-            <div class="section-1 center">
-                <div class="section-1-top">
-                    <h2><a href="#">드림즈 바로가기</a></h2>
+        <!-- 중간 시작 -->
+        
+        <div class="body1">
+            <div id="ticket-box">
+                <div>
+                    <h2>TICKET</h2>
                 </div>
-                <div class="section-1-bottom">
-                    <ul>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item1.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item2.png"
-                                    alt=""></a></li>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item3.png"
-                                    alt=""></a></li>
-                    </ul>
-                </div>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">일일티켓</a>
+                        <ul>
+                            <li><a href="ticketFee.html">입장요금</a></li>
+                            <li><a href="reservationInfo.html">예매안내</a></li>
+                            <li><a href="할인안내 작성중.html">할인안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">멤버쉽</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="DreamsMembership.html" class="on">드림즈멤버쉽</a>
+                            </li>
+                            <li>
+                                <a href="childrenMembership.html" class="on">듬린이(어린이 회원)</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">단체관람</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="groupViewing.html" class="on">안내</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hasChild">
+                        <a href="#">스카이박스</a>
+                        <ul style="display: block;">
+                            <li>
+                                <a href="skybox.html" class="on">소개 / 예약</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
             </div>
-        </section>
+            
+            <div class="membership-info">
+                <div class="center1">
+                    <h1 style="margin-top: 50px;">스카이박스 안내</h1>
+                </div>
+                <h6 style="color: whitesmoke; text-align: center;" >스카이박스에서 특별한 이벤트와 함께 야구를 관람해보세요</h6>
+                <h6 style="color: #1c5c50  !important; margin-top: 50px; font-weight: bold;" >1. 스카이박스 시설</h6>
+                <ul>
+                    <li>· TV, 에어컨, 소파, 테이블, 옷장, 냉장고, 휴대폰 충전기, 테라스 관람석</li>
+                </ul>
+                <h6 style="color: #1c5c50  !important; margin-top: 50px; font-weight: bold;" >2. 스카이박스 제공 서비스/이벤트</h6>
+                <ul>
+                    <li>1) 전용 출입구 이용(고척 스카이돔 중앙 C게이트)</li>
+                    <li>2) 전용 주차장 이용</li>
+                    <li>3) 마스코트 포토서비스</li>
+                </ul>
+                <h6 style="color: #1c5c50  !important; margin-top: 50px; font-weight: bold;" >3. 스카이박스 1일 사용 금액 안내</h6>
+                <table style="margin-bottom: 50px;">
+                    <thead >
+                        <tr>
+                            <td colspan="2">구분</td>
+                            <td>스카이박스</td>
+                            <td>최대 이용인원</td>
+                            <td>테라스 관람석</td>
+                            <td>1일 사용료(원)</td>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1루</td>
+                            <td>S08</td>
+                            <td>돔돔이 라운지</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>1,080,000</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">3루</td>
+                            <td>S12</td>
+                            <td>그린 라운지</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>1,080,000</td>
+                        </tr>
+                        <tr>
+                            <td>S14</td>
+                            <td>레드 라운지</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>1,080,000</td>
+                        </tr>
+                        <tr>
+                            <td>S14</td>
+                            <td>버건디 라운지</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>2,400,000</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+        </div>
 
         <footer>
             <div class="footer-1 center">
