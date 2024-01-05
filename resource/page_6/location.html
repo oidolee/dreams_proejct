@@ -86,9 +86,31 @@
         }
         
         /*  */
-        #location-container {
-            text-align: center;
+        #amenity-container {
             margin: auto;
+        }
+
+        .amenity-contents {
+            text-align: center;
+        }
+
+        .stadium-tab li {
+           
+           list-style: none;
+           display: inline-flex;
+           width: 150px;
+           font-weight: bold;
+        }
+
+        .stadium-tab .menuLink:hover {
+            color: black !important;
+            
+        }
+
+        .table {
+            text-align: center;
+            vertical-align: auto;
+            border: 1px solid;
         }
     </style>
 </head>
@@ -264,31 +286,25 @@
             </div>
         </div>
 
-        <section class="section-1-con">
-            <div class="section-1 center">
-                <div class="section-1-top">
-                    <h2>찾아오시는 길</h2>
-                </div>
-                <div class="section-1-bottom">
-                    <ul class="tabBorder stadium">
-                        <li><a href="#" class="on">고척 스카이돔</a></li>
-                        <li><a href="#">편의시설</a></li>
-                        <li><a href="#">찾아오시는 길</a></li>
-                        <li><a href="#">주차안내</a></li>
-                    </ul>
-                </div>
-                <div class="section-2-bottom">
-                    <div class="skydome">
-                        <div style ="text-align:center";>
-                            <h4><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficSubway_2023.png" alt="찾아오시는 길" ></h4>
+        <div class="amenity-contents">
+            <h2><br><br> 찾아오시는 길</h2><br>
+            <ul class="stadium-tab">
+                <li><a class="menuLink" href="./stadium.html">고척 스카이돔</a></li>
+                <li><a class="menuLink" href="./amenity.html">편의시설</a></li>
+                <li><a class="menuLink" href="./location.html">찾아오시는 길</a></li>
+                <li><a class="menuLink" href="./parking.html">주차안내</a></li>
+            </ul><br>
 
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficSubway_2023.png" alt="찾아오시는 길" >
             </div>
+        </div>
+        <br>
+        <br>
+
             <div >
                 <p>
-                <table border="2" width="1000" height="400" align="center" padding="100px" id="location-container">
+                <!-- <table border="2" width="1000" height="400" align="center" padding="80px" id="location-container">
                     <tr>
                         <td>신도림역</td>
                         <td>1호선</td>
@@ -310,11 +326,49 @@
                         <td colspan="8">2번 출구에서 약 100m 직진 후 고척스카이돔 정면 출입문 게이트 통해 입장 (도보 약 3분)<br>버스 이용 필요 없음</td>
                     </tr>
 
-                </table>
+                </table> -->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">지하철역</th>
+                        <th scope="col">호선</th>
+                        <th scope="col">오시는 길</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>신도림역</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/icoLine01.png"> <img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/icoLine02.png"></td>
+                        <td colspan="8">1번, 5번 출구에서 버스 이용 시 3정거장 소요<br>버스 : 160번 외 9개 노선운행</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>구로역</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/icoLine01.png"></td>
+                        <td>2번 출구에서 좌회전하여 1km 직진 후, 고척교 건너 좌측 위치(도보 약 20분)<br>버스: 5712번, 5626번</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>개봉역</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/icoLine01.png"></td>
+                        <td>2번 출구에서 200m 직진 후, 우회전하여 650m 직진 후 우측 위치(도보 약 15분)<br>버스: 마을버스06번 (고척교 방향)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>구일역</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/icoLine01.png"></td>
+                        <td>2번 출구에서 약 100m 직진 후 고척스카이돔 정면 출입문 게이트 통해 입장 (도보 약 3분)<br>버스 이용 필요 없음</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
             </p>
             </div>
 
-        </section>
+       
 
         <footer>
             <div class="footer-1 center">
