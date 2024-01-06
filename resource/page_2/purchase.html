@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제하기</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+         function selectEmailChk() {
+            // select 박스에서 이메일 주소를 선택시 해당값이 들어가도록 한다.
+            if(document.signIn.userEmail3.value == 0) {  // 직접입력인 경우
+                document.signIn.userEmail2.value = "";
+                document.signIn.userEmail2.focus();
+                return false;
+            }
+            else {
+                document.signIn.userEmail2.value = document.signIn.userEmail3.value;
+                return false;
+            }
+        }
+        function calculator(){
+            let bgNormalPrice = document.getElementById("bg-normal-price");
+            let bgMPrice = document.getElementById("bg-membership-price");
+            let bgCPrice = document.getElementById("bg-child-price");
+            let bgNCnt = parseInt(document.getElementById("bgnCnt").value);
+            let bgMCnt = parseInt(document.getElementById("bgmCnt").value);
+            let bgCCnt = parseInt(document.getElementById("bgcCnt").value);
+            let discount = 10000;
+            bgNormalPrice.value = 17000;
+            bgMPrice.value = 17000;
+            bgCPrice.value = 10000;
+            
+
+            let totalCnt = (bgNCnt + bgMCnt + bgCCnt);
+            let totalprice = ((bgNormalPrice.value*bgNCnt) + (bgMPrice.value*bgMCnt) + (bgCPrice.value*bgCCnt));
+            let finalTotalprice = (totalprice - discount);
+
+            document.getElementById('totalCnt').textContent = totalCnt.toLocaleString();
+            document.getElementById('totalprice').textContent = totalprice.toLocaleString() + '원';
+            document.getElementById('finalTotalprice').textContent = finalTotalprice.toLocaleString() + '원';
+            
+        }
+
+    </script>
+    <style>
+        .purchase{
+            display: flex;
+            background: white;
+        }
+        .purchase elements{
+            display: block;
+            border: 1px;
+            height: 498px;
+        }
+        table{
+            border-collapse: collapse;
+        
+        }
+        
+    </style>
+</head>
+<body style="background: #1c5c50;">
+    <div class="purchase">
+        <div class="elements">
+            <h3>가격</h3>
+
+            <p style=" background: rgb(214, 214, 214); border-top: 3px solid black; border-bottom: 1px solid black; margin-bottom: 0;">
+                <strong>버건디석</strong>
+            </p>
+            <table border="1" style="width: 416.55px;">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col >
+                </colgroup>
+                
+                
+                <tr id="normal-price">
+                    <td style="background: whitesmoke;">기본가</td>
+                    <td>일반</td>
+                    <td id="bg-normal-price">17,000</td>
+                    <td ><input id="bgnCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="background: whitesmoke;">기본할인</td>
+                    <td>멤버쉽</td>
+                    <td id="bg-membership-price">17,000</td>
+                    <td><input id="bgmCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                </tr>
+                <tr>
+                    <td>듬린이</td>
+                    <td id="bg-child-price">10,000</td>
+                    <td><input id="bgcCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                </tr>
+            </table>
+            <hr>
+            
+            <h3>예매자 확인</h3>
+            <form name="signIn" action="#">
+                <table>
+                    <tr>
+                        <td> 이름 </td>
+                        <td><input type="text" size="30px" name="이름" required></td>
+                    </tr>
+                    <tr>
+                        <td> 생년월일 </td>
+                        <td><input type="date" required></td>
+                    </tr>
+                    <tr>
+                        <td> 연락처 </td>
+                        <td><input type="text" size="30px" required></td>
+                    </tr>
+                    <tr>
+                        <td> 이메일 </td>
+                        <td>
+                        <input type="text"  id="emailChk"  name="userEmail1"  size="20"  style="width:100px">
+                         @
+                         <input type="text"  id="emailChk"  name="userEmail2"  size="20"  style="width:100px">
+                         <select name="userEmail3"  style="width:100px"  onchange="selectEmailChk();">
+                            <option value="0">직접입력</option>
+                            <option value="naver.com">네이버</option>
+                            <option value="gmail.com">구글</option>
+                            <option value="daum.net">다음</option>
+                            <option value="nate.com">네이트</option>
+                         </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <hr>
+            <h6>결제방식</h6>
+            <form name="radioForm" action="#" method="post"> <!-- radio 는 단 하나만 선택가능 -->
+                <fieldset>
+                    <table>
+                        <tr>
+                            <td><input type="radio" name="apply" id="ra_mu" value="무통장 입금" checked></td>
+                            <td><label for="ra_sales"></label>무통장 입금</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><input type="radio" name="apply" id="ra_card" value="카드"></td>
+                            <td><label for="ra_card"></label>카드</td>
+                            <td>
+                                <select name="cardtype"  style="width:100px">
+                                    <option value="shinhan">신한카드</option>
+                                    <option value="kako">카카오</option>
+                                    <option value="nh">농협</option>
+                                    <option value="woori">우리카드</option>
+                                    <option value="kb">국민카드</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <hr>
+
+        </div>
+        <div class="elements" style="background-color: white; width: 432px; height: 400px; margin-left: 100px;" >
+            <em>
+                <span title="드림즈 vs LG트윈스">드림즈 vs LG트윈스</span>
+            </em>
+            <h3 style="background-color: white; margin-bottom: 0;"><img src="https://ticketimage.interpark.com/TicketImage/onestop/tit_buy.gif" alt="My예매정보"></h3>
+            <table style="background: white; height: 400px;" border="1" >
+                <colgroup>
+                    <col width="32%">
+                    <col width="68">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>일시</th>
+                        <td>
+                            <span id="MyPlayDate" name="MyPlayDate" title="2024년 1월 10일(수) 19:00">2024년 1월 10일(수) 19:00</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>선택좌석<br>(<span id="totalCnt">0</span>석)</th>
+                        <td class="seat">
+                            <div class="scrollY">
+                                <ul>
+                                    <span id="MySelectedSeat" name="MySelectedSeat">자동배정</span>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>티켓금액</th>
+                        <td id="totalprice">0원</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>배송료</th>
+                        <td><div class="skip"><span id="MyDeliveryAmt" name="MyDeliveryAmt" title="0원 | 모바일티켓">0원 | 모바일티켓</span></div></td>
+                    </tr>
+                    <tr>
+                        <th>할인</th>
+                        <td><div class="skip"><span id="MyDiscount" name="MyDiscount" title=""></span></div></td>
+                    </tr>
+                    <tr class="total">
+                        <th>총 결제금액</th>
+                        <td id="finalTotalprice">0원</td>
+                    </tr>
+                    <tr style="border: 0 solid white;">
+                        <td>
+                        </td>
+                        <td style="padding-right: 0;">
+                            <div style="display: flex; justify-content: flex-end; background: white; " >
+                                <div id="cancle" style="margin-right: 10px;">
+                                    <input type="submit" value="취소하기" onclick="alert('결제가 취소되었습니다.')  ">
+                                </div>
+                                <div id="payit">
+                                    <input type="submit" value="결제하기" onclick="alert('결제가 완료되었습니다')">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>
