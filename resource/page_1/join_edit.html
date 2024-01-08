@@ -58,7 +58,6 @@ input:focus {
 
 .section-1 {
 	height: 100%;
-	padding: 80px 0;
 }
 
 .section-1-top h2 {
@@ -82,6 +81,7 @@ input:focus {
 	display: flex;
 	justify-content: center;
 	padding-left: 850px;
+	margin-top: 90px;
 
 }
 
@@ -226,56 +226,64 @@ input:focus {
                                     <tr>
                                         <th style="color: #ffffff  !important;"> 아이디 </th>
                                         <td>
-                                            <input type="text" class="input" name="userid" size="20" placeholder="hong123" disabled >    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" id="userId" name="userid" size="20" placeholder="hong123" disabled >    <!-- placeholder : 힌트 -->
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th style="color: #ffffff  !important;"> 비밀번호 </th>
+                                        <th> 
+											<label for="userPwd" style="color: #ffffff !important;">비밀번호</label>
+										</th>
                                         <td>
-                                            <input type="password" class="input" name="password" size="20" placeholder="공백없이 20자이내로 작성" required>    <!-- placeholder : 힌트 -->
+                                            <input type="password" class="input" id="userPwd" name="password" size="20" placeholder="영숫자 8자이상" required>   
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th style="color: #ffffff  !important;">비밀번호<br>(확인)</th>
+										<th>
+                                        	<label for="userRePwd" style="color: #ffffff  !important;">비밀번호<br>(확인)</label>
+										</th>
                                         <td>
-                                            <input type="password" class="input" name="repassword" size="20" placeholder="비밀번호 확인" required>    <!-- placeholder : 힌트 -->
+                                            <input type="password" class="input" id="userRePwd" name="repassword" size="20" placeholder="비밀번호 확인" required>    
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th style="color: #ffffff  !important;"> 이름 </th>
                                         <td>
-                                            <input type="text" class="input" name="username" size="20" placeholder="홍길동" disabled>    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" id="userName" name="username" size="20" placeholder="홍길동" disabled>    <!-- placeholder : 힌트 -->
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th style="color: #ffffff  !important;"> 생년월일 </th>
                                         <td>
-                                            <input type="text" class="input" name="birthday" size="8" placeholder="1995-01-05" disabled>    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" id="brithDay" name="birthday" size="8" placeholder="1995-01-05" disabled>    <!-- placeholder : 힌트 -->
                                         </td>
                                     </tr>
 
 
                                     <tr>
-                                        <th style="color: #ffffff  !important;">  연락처 </th>
+										<th>
+                                        	<label for="Hp1" style="color: #ffffff  !important;">  연락처</label>
+										 </th>
                                         <td>
-                                            <input type="text" class="input" name="hp1" size="3" style="width: 75px"  >    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" id="Hp1" name="hp1" size="3" style="width: 75px"  >  
                                             -
-                                            <input type="text" class="input" name="hp2" size="4" style="width: 95px"  >    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" name="hp2" size="4" style="width: 95px"  > 
                                             -
-                                            <input type="text" class="input" name="hp3" size="4" style="width: 95px"  >    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" name="hp3" size="4" style="width: 95px"  >   
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th style="color: #ffffff  !important;"> 이메일 </th>
+										<th>
+                                        <label for="Email1" style="color: #ffffff  !important;"> 이메일</label> 
+										</th>
                                         <td>
-                                            <input type="text" class="input" name="email1" maxlength="20" style="width: 70px" required>    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" id="Email1" name="email1" maxlength="20" style="width: 70px" required>    
                                             @
-                                            <input type="text" class="input" name="email2" maxlength="20" style="width: 100px" required>    <!-- placeholder : 힌트 -->
+                                            <input type="text" class="input" name="email2" maxlength="20" style="width: 100px" required>   
                                             <select class="input" name="email3" style="width: 100px; color: #000 !important;">
                                                 <option value="0">직접입력</option>
                                                 <option value="naver.com">네이버</option>
@@ -292,7 +300,7 @@ input:focus {
                                             <div align="right">
                                                 <input class="inputButton" type="submit" value="수정완료" style="color: #000  !important;">
                                                 <input class="inputButton" type="reset" value="초기화" style="color: #000  !important;">
-                                                <input class="inputButton" type="button" value="수정취소" onclick="window.location='../login/login.html'" style="color: #000  !important;">
+                                                <input class="inputButton" type="button" value="수정취소" onclick="window.location='../../index.html'" style="color: #000  !important;">
                                             </div>
                                         </td>
                                     </tr>
@@ -300,7 +308,7 @@ input:focus {
 								<div>
 								</div>	
 							</div>
-							<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 280px; position: relative;">
+							<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 105px; position: relative;">
 								<div style="border-bottom: 1px solid; width: 58%; color: #000 !important;">
 								</div>
 						</form>

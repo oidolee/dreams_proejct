@@ -85,6 +85,7 @@ input:focus {
 	display: flex;
 	justify-content: center;
 	padding-left: 850px;
+	margin-top: 90px;
 
 }
 
@@ -93,6 +94,23 @@ input:focus {
 }
 
 </style>
+
+<script type="text/javascript">
+	function checkForm() {
+		let userId = document.getElementsByName("userid")[0].value;
+		let password = document.getElementsByName("password")[0].value;
+
+		if (userId == "") {
+			alert("아이디를 입력해주세요");
+			return false;
+		}
+		
+		if (password == "") {
+			alert("비밀번호를 입력해주세요");
+			return false;
+		}
+	}
+</script>
 
 
 </head>
@@ -107,8 +125,8 @@ input:focus {
 					<div class="top-box">
 						<div class="right">
 							<ul>
-								<li><a href="#">로그인</a></li>
-								<li><a href="#">회원가입</a></li>
+								<li><a href="login.html">로그인</a></li>
+								<li><a href="join.html">회원가입</a></li>
 								<li><a href="#">안내 및 Q&A</a></li>
 								<li><a href="#"> <img
 										src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns1.png"
@@ -218,28 +236,30 @@ input:focus {
 								</div>
 							</div>
 
-							<table style="display: flex; justify-content: center;">
-								<tr>
-									<td><input type="text" class="input" name="userid" title="아이디" placeholder="아이디" autofocus>
-									</td>
-								</tr>
+							<form onsubmit="return checkForm();">
+								<table style="display: flex; justify-content: center;">
+									<tr>
+										<td><input type="text" class="input" name="userid" title="아이디" placeholder="아이디" autofocus onclick="checkForm">
+										</td>
+									</tr>
 
-								<tr>
-									<td>
-										<input type="password" class="input" name="password" title="비밀번호" placeholder="비밀번호">
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<button type="submit">로그인</button> 
-										<div style="display: flex; justify-content: center;">
-											<a href="../join/join.html" style="padding-right: 15px;"> <strong>회원가입</strong></a> 
-											<a href="#" style="padding: 0 15px; border-left: 1px solid #dadada !important;"> 아이디 찾기</a> 
-											<a href="#" style="padding-left: 15px; border-left: 1px solid #dadada !important;"> 비밀번호 찾기</a>
-										</div>
-									</td>
-								</tr>
-							</table>
+									<tr>
+										<td>
+											<input type="password" class="input" name="password" title="비밀번호" placeholder="비밀번호">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button type="submit">로그인</button> 
+											<div style="display: flex; justify-content: center;">
+												<a href="join.html" style="padding-right: 15px;"> <strong>회원가입</strong></a> 
+												<a href="#" style="padding: 0 15px; border-left: 1px solid #dadada !important;"> 아이디 찾기</a> 
+												<a href="#" style="padding-left: 15px; border-left: 1px solid #dadada !important;"> 비밀번호 찾기</a>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</form>
 							<hr id="blackline" style="margin-top: 50px; color: black !important; opacity: 1;">
 						</div>
 					</form>

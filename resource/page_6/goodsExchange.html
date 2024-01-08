@@ -47,6 +47,19 @@
         .section-1-top h2{text-align: center; }
         .section-1-top h2 a{color: #000 !important;}
         .section-1-bottom ul{display: flex; justify-content: space-between;  align-items: center; padding-top: 40px; padding-left: 0;}
+
+
+        .goods {
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            margin: auto;
+            
+            border-spacing: 10px;
+            border-collapse: separate;
+        }
     </style>
 
 
@@ -158,59 +171,81 @@
             </div>
         </div>
 
-        <section class="section-1-con">
-            <div class="section-1 center">
-                <div class="section-1-top">
-                    <h2>상품 교환</h2>
-                </div>
-                <div class="section-1-bottom">
-					<fieldset> 
-						<legend> 최근 구매한 상품 </legend>
-						<table>
-							<tr>
-								<td><label><input type="checkbox" name="eng_conv" value="low" checked> 야구배트1 </label></td>
-							</tr>
-							<tr>
-								<td><label><input type="checkbox" name="eng_conv" value="middle"> 키링1 </label></td>
-							</tr>
-							<tr>
-								<td><label><input type="checkbox" name="eng_conv" value="high"> 야구공1 </label></td>
-							</tr>
-						</table>
-					</fieldset>
-					<hr>
-					<div>
-						
-						<table>
-							<tr>
-								<td><label for="attachFile"></label></td>
-								<td><input type="file"></td>
-							</tr>
-						</table>
-						<table>
-							<tr>
-								<th align="right"><label for="id">교환 사유</label></th>
-								<td><input type="text" id="id" name="userId" size="100" placeholder="이미지를 첨부하시면 확인이 빠릅니다" autofocus required></td>
-							</tr>
-							<tr>
-								<th align="right"><label for="pwd"> 받으실 주소 </label></th>
-								<td><input type="password" id="pwd" name="userpwd" size="30" placeholder="" required></td>
-							</tr>
-							
-							<tr>
-								<td colspan="2"><br>
-									<div align = "center">
-										<input type = "submit" value="상품 교환 신청">
-										<input type = "reset" value="재작성">
-									</div>
-								</td>	
-							</tr>
-							
-						</table>
-					</div>
-                </div>
-            </div>
-        </section>
+        <div class="goods">
+            <h2>상품 교환</h2>
+            <fieldset> 
+                <legend> 최근 구매한 상품 </legend>
+                <table class="table" align="center">
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">사진</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">가격</th>
+                        <th scope="col">구매일자</th>
+                        <th scope="col">배송</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball1"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball2"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball3"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            
+        <div>
+
+            
+            <table>
+                <tr>
+                    <th><label for="id">교환 사유</label></th>
+                    <td><input type="text" id="id" name="userId" size="100" placeholder="이미지를 첨부하시면 확인이 빠릅니다" autofocus required></td>
+                </tr>
+                <tr align="left">
+                    <td><label for="attachFile"></label></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <th><label for="adress"> 받으실 주소 </label></th>
+                    <td><input type="text" id="address" name="userpwd" size="100" placeholder="" required></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2"><br>
+                        <div>
+                            <input type = "submit" value="상품 교환 신청">
+                            <input type = "reset" value="재작성">
+                        </div>
+                    </td>	
+                </tr>
+                
+            </table>
 
         <footer>
             <div class="footer-1 center">
