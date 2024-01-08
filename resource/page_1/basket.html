@@ -293,94 +293,100 @@
         <div class="wrap">
             <!-- 컨텐츠 시작 -->
             <div id="container">
-                <div id="contents" align="center">
-                    <!-- 상단 중앙1 시작 -->
-                    <div id="section1" style="padding-top: 30px;">
-                        <h2 style=" color: #000 !important"> 장바구니 </h2>
-                    </div>
-    
-                    <!-- 상단 중앙2 시작 -->
-                    <div id="section2">
+                <form action="#">   <!--  상품주문링크 -->
+                    <div id="contents" align="center">
+                        <!-- 상단 중앙1 시작 -->
+                        <div id="section1" style="padding-top: 30px;">
+                            <h2 style=" color: #000 !important"> 장바구니 </h2>
+                        </div>
+        
+                        <!-- 상단 중앙2 시작 -->
+                        <div id="section2">
 
-                        <!-- 장바구니 시작 -->
-                        <div id="right">
-                            <div class="table_div">
-                                
-                                <form name="ad_productAdd" action="ad_productAddAction.html" method="post">   <!-- post : 노출x / get : 노출o -->
-                                    <table style="width: 100%;">
-                                        <tr>
-                                            <th style="width: 7%; color: #ffffff !important;">
-                                                <input type="checkbox" id="selectAll"> 
-                                            </th>
-                                            <th style="width: 20%; color: #ffffff !important;"> 상품정보 </th>
-                                            <th style="width: 28%; color: #ffffff !important;"> 상품명 </th>
-                                            <th style="width: 7%; color: #ffffff !important;"> 수량 </th>
-                                            <th style="width: 13%; color: #ffffff !important;"> 상품금액 </th>
-                                            <th style="width: 13%; color: #ffffff !important;"> 합계금액 </th>
-                                            <th style="width: 10%; color: #ffffff !important;"> 배송비 </th>
-                                        </tr>
-    
-                                        <!-- 장바구니 목록 -->
-                                        <tr>
-                                            <td>
-                                                <label><input type="checkbox" name="check1" value="check1"></label>
-                                            </td>
-                                            <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMTRfMjg0%2FMDAxNTgxNjQ5ODE2MjA1.nQ6nx80RlsMeIAhg7NqZtQi_RF-EQBvjejekIDAo0-Eg.VELqjExMNTIq5sf1qODKc7FoHxXh8cho39mt8x8zlNUg.JPEG.gamzatan%2F20200214_121001.jpg&type=sc960_832" width="250" height="250"></image> </td>
-                                            <td style="color: #000 !important;"> [선착순한정] [LOCKERDIUM] 스토브리그 드림즈 멤버십 패키지(HOME) </td>
-                                            <td style="text-align: center; border: none;">
-                                                <input type="number" id="stdNum" name="std_num" min="0" max="100" value="1" autofocus style="text-align: center; width: 50px; border: none; background-color:transparent;" oninput="calculateTotal()">
-                                            </td>
-                                            <td style="color: #000 !important;"> 80,000원 </td>
-                                            <td id="totalPrice" style="color: #000 !important;"> 80,000원 </td>
-                                            <td rowspan="2" style="color: #000 !important;" >배송비 무료</td>
-                                        </tr>
-    
-                                        <tr>
-                                            <td>
-                                                <label><input type="checkbox" name="check1" value="check1"></label>
-                                            </td>
-                                            <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAyMDVfNzUg%2FMDAxNTgwODY4MDMzOTU5._3Pnin3euDMyv0KR4dZVzT-Rsq2q4TRemMF3bbXwJQMg.RgwJ1gXIwEqKn56p0hSPIu4VuIqJWmRHy1ZLyoN_XCEg.PNG%2F%25C8%25C4%25B5%25E5%25C6%25BC.PNG&type=sc960_832" width="250" height="250"></image> </td>
-                                            <td style="color: #000 !important;"> [★3차] [LOCKERDIUM] 스토브리그 드림즈 후드티셔츠 </td>
-                                            <td>
-                                                <input type="number" id="stdNum2" name="std_num2" min="0" max="100" value="1" autofocus style="text-align: center; width: 50px; border: none; background-color:transparent;" oninput="calculateTotal()">
-                                            </td>
-                                            <td style="color: #000 !important;"> 120,000원 </td>
-                                            <td id="totalPrice2" style="color: #000 !important;"> 120,000원 </td>
-                                        </tr>
-                                    </table>
-                                </form>
-                            </div>
-                            <div class="sumTotalWrap">
-                                <div class="box">
-                                    <div class="sumPrice">
-                                                <span class="tit" style="color: #000000 !important;">총 주문 금액</span>
-                                                <span class="txt">
-                                                    <strong id="totalAll" style="color: #000000 !important;">0</strong>
-                                                    <span style="color: #000000 !important;">원</span>
-                                                </span>
-                                    </div>
-                                        <span class="plus" style= "font-size: 25px; padding-top: 10px; color: #000000 !important;">+</span>
-                                    <div class="sumPrice">
-                                        <span class="tit" style="color: #000000 !important;">배송비</span>
-                                        <span class="txt">
-                                            <strong id="totaldlvr" style="color: #000000 !important;">0</strong>
-                                            <span style="color: #000000 !important;">원</span>
-                                        </span>
-                                    </div>
-                                        <span class="equal" style="font-size: 25px; padding-top: 10px; color: #000000 !important;">=</span>
-                                    <div class="sumPrice">
-                                        <span class="tit" style="color: #000000 !important;">결제 예정 금액</span>
-                                        <span class="txt">
-                                            <strong id="totalAll2" style="color: #000000 !important;">0</strong>
-                                            <span style="color: #000000 !important;">원</span>
-                                        </span>
+                            <!-- 장바구니 시작 -->
+                            <div id="right">
+                                <div class="table_div">
+                                    
+                                    <form name="ad_productAdd" action="ad_productAddAction.html" method="post">   <!-- post : 노출x / get : 노출o -->
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <th style="width: 7%; color: #ffffff !important;">
+                                                    <input type="checkbox" id="selectAll"> 
+                                                </th>
+                                                <th style="width: 20%; color: #ffffff !important;"> 상품정보 </th>
+                                                <th style="width: 28%; color: #ffffff !important;"> 상품명 </th>
+                                                <th style="width: 7%; color: #ffffff !important;"> 수량 </th>
+                                                <th style="width: 13%; color: #ffffff !important;"> 상품금액 </th>
+                                                <th style="width: 13%; color: #ffffff !important;"> 합계금액 </th>
+                                                <th style="width: 10%; color: #ffffff !important;"> 배송비 </th>
+                                            </tr>
+        
+                                            <!-- 장바구니 목록 -->
+                                            <tr>
+                                                <td>
+                                                    <label><input type="checkbox" name="check1" value="check1"></label>
+                                                </td>
+                                                <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMTRfMjg0%2FMDAxNTgxNjQ5ODE2MjA1.nQ6nx80RlsMeIAhg7NqZtQi_RF-EQBvjejekIDAo0-Eg.VELqjExMNTIq5sf1qODKc7FoHxXh8cho39mt8x8zlNUg.JPEG.gamzatan%2F20200214_121001.jpg&type=sc960_832" width="250" height="250"></image> </td>
+                                                <td style="color: #000 !important;"> [선착순한정] [LOCKERDIUM] 스토브리그 드림즈 멤버십 패키지(HOME) </td>
+                                                <td style="text-align: center; border: none;">
+                                                    <input type="number" id="stdNum" name="std_num" min="0" max="100" value="1" autofocus style="text-align: center; width: 50px; border: none; background-color:transparent;" oninput="calculateTotal()">
+                                                </td>
+                                                <td style="color: #000 !important;"> 80,000원 </td>
+                                                <td id="totalPrice" style="color: #000 !important;"> 80,000원 </td>
+                                                <td rowspan="2" style="color: #000 !important;" >배송비 무료</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <td>
+                                                    <label><input type="checkbox" name="check1" value="check1"></label>
+                                                </td>
+                                                <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAyMDVfNzUg%2FMDAxNTgwODY4MDMzOTU5._3Pnin3euDMyv0KR4dZVzT-Rsq2q4TRemMF3bbXwJQMg.RgwJ1gXIwEqKn56p0hSPIu4VuIqJWmRHy1ZLyoN_XCEg.PNG%2F%25C8%25C4%25B5%25E5%25C6%25BC.PNG&type=sc960_832" width="250" height="250"></image> </td>
+                                                <td style="color: #000 !important;"> [★3차] [LOCKERDIUM] 스토브리그 드림즈 후드티셔츠 </td>
+                                                <td>
+                                                    <input type="number" id="stdNum2" name="std_num2" min="0" max="100" value="1" autofocus style="text-align: center; width: 50px; border: none; background-color:transparent;" oninput="calculateTotal()">
+                                                </td>
+                                                <td style="color: #000 !important;"> 120,000원 </td>
+                                                <td id="totalPrice2" style="color: #000 !important;"> 120,000원 </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                                <div class="sumTotalWrap">
+                                    <div class="box">
+                                        <div class="sumPrice">
+                                                    <span class="tit" style="color: #000000 !important;">총 주문 금액</span>
+                                                    <span class="txt">
+                                                        <strong id="totalAll" style="color: #000000 !important;">0</strong>
+                                                        <span style="color: #000000 !important;">원</span>
+                                                    </span>
+                                        </div>
+                                            <span class="plus" style= "font-size: 25px; padding-top: 10px; color: #000000 !important;">+</span>
+                                        <div class="sumPrice">
+                                            <span class="tit" style="color: #000000 !important;">배송비</span>
+                                            <span class="txt">
+                                                <strong id="totaldlvr" style="color: #000000 !important;">0</strong>
+                                                <span style="color: #000000 !important;">원</span>
+                                            </span>
+                                        </div>
+                                            <span class="equal" style="font-size: 25px; padding-top: 10px; color: #000000 !important;">=</span>
+                                        <div class="sumPrice">
+                                            <span class="tit" style="color: #000000 !important;">결제 예정 금액</span>
+                                            <span class="txt">
+                                                <strong id="totalAll2" style="color: #000000 !important;">0</strong>
+                                                <span style="color: #000000 !important;">원</span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="order2" style="align-items: center; padding-top: 30px;" >
+                                    <input id="btn1" type="submit" value="선택상품주문">
+                                    <input id="btn1" type="submit" value="전체상품주문">
+                                </div>
                             </div>
+                            <!-- 장바구니 종료 -->
                         </div>
-                        <!-- 장바구니 종료 -->
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 
