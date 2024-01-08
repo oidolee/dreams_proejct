@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+<!-- 페이지 작업자 : 이민진 -->
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>스토브리그</title>
-
+    <!-- reset.css -->
     <link rel="stylesheet" href="./resource/css/common/reset.css">
     <!-- Bootstrap css-->
     <link href="./resource/css/bootstrap/bootstrap.css" rel="stylesheet" />
-
     <!-- swiper css-->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="./resource/css/common/common.css">
     <link rel="stylesheet" href="./resource/css/common/header.css">
     <link rel="stylesheet" href="./resource/css/common/footer.css">
+    <link rel="stylesheet" href="./resource/css/index.css">
 
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -22,127 +23,38 @@
     <script src="./resource/js/bootstrap/bootstrap.bundle.js"></script>
     <!-- swiper js-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <!-- header.js -->
     <script src="./resource/js/common/header.js"></script>
-    <style>
-        .container-box {
-            padding: 0;
-        }
 
-        .center {
-            max-width: 1240px;
-            margin: 0 auto;
-        }
+    <script>
+        // 페이지 로드 후 실행될 함수
+        $(document).ready(function () {
+            // top 버튼 클릭 시 스크롤
+            $('#goTop a[href="#header"]').on('click', function (e) {
+                window.scroll({
+                    top: 0,
+                });
+                checkButton();
+            });
+        });
 
-        .section-1-con {
-            min-height: 440px;
-        }
+        //크롬 스크롤 오류로 시간 지정 후 동장
+        $(window).on("scroll", function () {
+            $("#goTop a").attr("href", "#none")
+            $("#goTop").css({ "background-color": "rgba(255, 255, 255, 0.1)" });
+            setTimeout(() => {
+                $("#goTop a").attr("href", "#header")
+                $("#goTop").css({ "background-color": "rgba(255, 255, 255, 0.7)" });
+            }, 2000);
+        })
 
-        .section-1 {
-            height: 100%;
-            padding: 80px 0;
-        }
-
-        .section-1-top h2 {
-            text-align: center;
-        }
-
-        .section-1-top h2 a {
-            color: #000 !important;
-        }
-
-        .section-1-bottom ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            padding-left: 0;
-        }
-
-        /* 반응형 */
-        @media screen and (max-width:1280px) {
-            .footer-1 {
-                padding: 30px;
-            }
-
-            .section-1-bottom ul {
-                flex-direction: column;
-            }
-
-            .footer-list-box {
-                flex-direction: column;
-            }
-
-            .footer-list-box .item-box ul {
-                justify-content: center;
-            }
-
-            .txt-add {
-                text-align: center;
-            }
-        }
-
-        @media screen and (max-width:560px) {
-            .footer-1 {
-                font-size: 14px;
-            }
-
-            .footer-list-box {
-                flex-direction: row;
-            }
-
-            .link-list {
-                flex-direction: column;
-            }
-
-            .footer-list-box {
-                flex-direction: column;
-            }
-
-            .link-list {
-                align-items: center;
-            }
-        }
-
-        /* swiper(슬라이더) */
-        swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .section-2-con{background-color: #efefef;}
-        .section-2-con .news-1{max-width: 1280px; margin: 0 auto;}
-        .section-2-con .news-1 .new-box{width: 280px;}
-        .section-2-con .news-1 .new-box img{width: 100%;}
-        .news-bottom-1{display: flex; justify-content: space-between;}
-        .news-bottom-1>li{transition: transform 0.2s ease;}
-        .news-bottom-1>li:hover{transform: scale(1.05); }
-    </style>
+    </script>
 </head>
 <div class="wrap">
-
+    <!-- 상단 이동 헤더 -->
+    <div id="header"></div>
     <body>
         <div class="container-fluid container-box">
             <header>
@@ -150,26 +62,21 @@
                     <div class="top-box">
                         <div class="right">
                             <ul>
-                                <li><a href="#">로그인</a></li>
-                                <li><a href="#">회원가입</a></li>
+                                <li><a href="./resource/page_1/login.html">로그인</a></li>
+                                <li><a href="./resource/page_1/join.html">회원가입</a></li>
                                 <li><a href="#">안내 및 Q&A</a></li>
-                                <!-- <li><a href="#">
-                                    <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/btnShop.png" alt="">
-                                    shop
-                                </a></li> -->
-                                <li><a href="#">
+                                <li><a href="https://www.youtube.com/results?search_query=%EC%8A%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EA%B7%B8" target="_blank">
                                         <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns1.png"
                                             alt="youtube">
                                     </a></li>
-                                <li><a href="#">
+                                <li><a href="https://www.instagram.com/explore/tags/%EC%8A%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EA%B7%B8/top/" target="_blank">
                                         <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns2.png"
                                             alt="instagram">
                                     </a></li>
-                                <li><a href="#">
+                                <li><a href="https://www.facebook.com/watch/sbsdrama.official/2552511298297818/" target="_blank">
                                         <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/top_sns3.png"
                                             alt="facebokk">
                                     </a></li>
-
                             </ul>
                         </div>
                     </div>
@@ -181,6 +88,7 @@
                                 <img src="./resource/image/logoSmall.png" style="width: 100%;" alt="logoSmall">
                             </a>
                         </h2>
+                        <!-- pc -->
                         <ul id="menu_box" class="menu-box">
                             <li>
                                 <a href="#">DREAMS</a>
@@ -228,15 +136,24 @@
                             <li>
                                 <a href="#">TICKET</a>
                                 <ul class="menu-son display-none">
-                                    <li><a href="#">일일티켓</a></li>
-                                    <li><a href="#">멤버쉽</a></li>
-                                    <li><a href="#">단체관람</a></li>
-                                    <li><a href="#">스카이박스</a></li>
+                                    <li><a href="./resource/page_2/ticketFee.html">일일티켓</a></li>
+                                    <li><a href="./resource/page_2/DreamsMembership.html">멤버쉽</a></li>
+                                    <li><a href="./resource/page_2/groupViewing.html">단체관람</a></li>
+                                    <li><a href="./resource/page_2/skybox.html">스카이박스</a></li>
                                 </ul>
                             </li>
                         </ul>
 
+                        <!-- mobile -->
                         <ul id="mo-menu-box" class="mo-menu-box">
+                            <li style="position: relative;">
+                                <div class="home-box">
+                                    <a href="#">HOME</a>
+                                    <a href="./resource/page_1/login.html">로그인</a>
+                                    <a href="./resource/page_1/join.html">회원가입</a>
+
+                                </div>
+                            </li>
                             <li>
                                 <a href="#">DREAMS</a>
                                 <ul class="menu-son">
@@ -283,10 +200,10 @@
                             <li>
                                 <a href="#">TICKET</a>
                                 <ul class="menu-son ">
-                                    <li><a href="#">일일티켓</a></li>
-                                    <li><a href="#">멤버쉽</a></li>
-                                    <li><a href="#">단체관람</a></li>
-                                    <li><a href="#">스카이박스</a></li>
+                                    <li><a href="./resource/page_2/ticketFee.html">일일티켓</a></li>
+                                    <li><a href="./resource/page_2/DreamsMembership.html">멤버쉽</a></li>
+                                    <li><a href="./resource/page_2/groupViewing.html">단체관람</a></li>
+                                    <li><a href="./resource/page_2/skybox.html">스카이박스</a></li>
                                 </ul>
                             </li>
                             <div class="ul-bg"></div>
@@ -298,24 +215,29 @@
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" id="icon"
                         class="bi bi-list icon" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg>
                 </div>
             </header>
         </div>
 
-        <div class="slider-con">
+        <div id="slider_con" class="slider-con">
             <div class="slider-box">
-                <!-- <img style="width: 100%;" src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg" alt="main"> -->
-                <swiper-container class="mySwiper" pagination="true">
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_01.jpg" alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_02.jpg" alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_03.jpg" alt="main"></swiper-slide>
-                    
+                <!-- <swiper-container class="mySwiper" pagination="true" loop="true"> -->
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+                    space-between="30" centered-slides="true" autoplay-delay="2000"
+                    autoplay-disable-on-interaction="false">
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_01.jpg"
+                            alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_02.jpg"
+                            alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_03.jpg"
+                            alt="main"></swiper-slide>
                 </swiper-container>
+
             </div>
         </div>
+
         <section class="section-1-con">
             <div class="section-1 center">
                 <div class="section-1-top">
@@ -341,53 +263,127 @@
             <div class="news-1">
                 <div class="news-title">
                     <h3>드림즈 구단 소식</h3>
-                    <a href="/story/heroesNews/list.do">더보기</a>
+                    <a href="#">더보기</a>
                 </div>
-                <ul class="news-bottom-1">
+                <ul class="news-bottom-1 first">
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
+                        <div class="card" style="width: 18rem;">
+                            <div class="imgBox imgBox_1"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">드림즈 계약!</h5>
+                                <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <a href="#" class="btn grean">더보기</a>
                             </div>
-                        </a>
+                        </div>
+    
+                        <div class="card" style="width: 18rem;">
+                            <div class="imgBox imgBox_2"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">드림즈 계약!</h5>
+                                <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <a href="#" class="btn grean">더보기</a>
+                            </div>
+                        </div>
                     </li>
+                
                     <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
+                        <div class="card" style="width: 18rem;">
+                            <div class="imgBox imgBox_3"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">드림즈 계약!</h5>
+                                <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <a href="#" class="btn grean">더보기</a>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
+                        </div>
+    
+                        <div class="card" style="width: 18rem;">
+                            <div class="imgBox imgBox_4"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">드림즈 계약!</h5>
+                                <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                                <a href="#" class="btn grean">더보기</a>
                             </div>
-                        </a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">
-                            <div class="new-box">
-                                <img src="https://www.heroesbaseball.co.kr/files/bbs.6//2023/12/22/854d5db6-2156-4083-829f-d4873561847b.jpg" alt="picher1">
-                                <p>외국인 투수 아리엘 후라도와 2024시즌 계약</p>
-                                <p>2023-12-13</p>
-                            </div>
-                        </a>
-                    </li>
-
                 </ul>
             </div>
-            <div class="news-2">
-                <div class="news-title"></div>
+     
+        </section>
+
+        <section class="section-2-con" style="padding-top: 0;">
+            <div class="news-1">
+                <div class="news-title">
+                    <h3>드림즈 영상</h3>
+                    <a href="#">더보기</a>
+                </div>
+                <ul class="news-bottom-1 second">
+                    <div class="card" style="width: 25rem;">
+                        <div class="imgBox_second imgBox_5"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">드림즈 계약!</h5>
+                            <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                            <a href="#" class="btn grean">더보기</a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="imgBox_second imgBox_6"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">드림즈 계약!</h5>
+                            <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                            <a href="#" class="btn grean">더보기</a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="imgBox_second imgBox_7"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">드림즈 계약!</h5>
+                            <p class="card-text">외국인 투수 아리엘 후라도와 2024시즌 계약</p>
+                            <a href="#" class="btn grean">더보기</a>
+                        </div>
+                    </div>
+                </ul>
             </div>
         </section>
 
+        <section class="section-3-con">
+            <div class="section-3">
+                <dl>
+                    <dt>
+                        <h2 style="font-size: 35px; font-weight: 600;">All about DREAMS</h2>
+                        <P>드림즈의 다양한 채널과 함께하세요.</P>
+                    </dt>
+                    <dd class="icons">
+                        <ul>
+                            <li>
+                                <a href="https://www.youtube.com/results?search_query=%EC%8A%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EA%B7%B8" target="_blank">
+                                    <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_about_item1.png"
+                                        alt="youtube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/explore/tags/%EC%8A%A4%ED%86%A0%EB%B8%8C%EB%A6%AC%EA%B7%B8/top/" target="_blank">
+                                    <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_about_item2.png"
+                                    alt="instagram">
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/watch/sbsdrama.official/2552511298297818/" target="_blank">
+                                    <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_about_item3.png"
+                                    alt="facebokk">
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+        <!-- 상단 이동버튼 -->
+        <div id="goTop" class="goTop">
+            <a href="#header"></a>
+        </div>
         <footer>
             <div class="footer-1 center">
                 <div class="footer-list-box">
@@ -407,12 +403,9 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/common/txt_footer.png"
-                            alt="드림즈 프로야구단">
+                        <img src="./resource/image/logoSmall.png" alt="드림즈 프로야구단" style="width: 200px;">
                     </div>
-
                 </div>
-
             </div>
         </footer>
     </body>
