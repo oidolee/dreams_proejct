@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>티켓 환불</title>
+    <title>마이페이지</title>
 
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -60,11 +60,21 @@
             margin: 0 auto;
         }
 
-        .seatRefund-button {
-            margin: 100px 50px;
+        .mypage {
+            text-align: center;
         }
 
+        .table {
+            vertical-align: middles;
+        }
+
+        .mypage-button {
+            padding: 50px;
+            
+        }
+        
     </style>
+
 
 
 </head>
@@ -175,16 +185,17 @@
             </div>
         </div>
 
-        <div class="seat-refund">
-            <h2> <br>티켓환불<br><br> </h2>
-                <h3> <br> 구매한 티켓 </h3>
+        <!-- 마이페이지 시작 -->
+        <div class="mypage">
+            <h2> <br>마이 페이지<br><br> </h2>
+            <a class="btn btn-primary" href="./seatRefund.html" role="button">좌석 환불</a>
+                <h3> <br> 최근 구매한 상품 </h3>
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">선택</th>
-                        <th scope="col">경기 일자</th>
-                        <th scope="col">좌석</th>
-                        <th scope="col">구분</th>
+                        <th scope="col">사진</th>
+                        <th scope="col">상품명</th>
                         <th scope="col">수량</th>
                         <th scope="col">가격</th>
                         <th scope="col">구매일자</th>
@@ -193,24 +204,47 @@
                     </thead>
                     <tbody class="table-group-divider">
                       <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot12.png">외야지정석</td>
-                        <td>일반</td>
-                        <td>3개</td>
-                        <td>39000원</td>
+                        <td><label><input type="checkbox" name="goods" value="ball1"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
                         <td>2024년 1월 7일</td>
                         <td>배송완료</td>
                       </tr>
-                      
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball2"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball3"> </label></td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
                     </tbody>
                 </table>
 
-                <div class="seatRefund-button">
+                <div class="mypage-button">
+                    <button class="btn btn-primary" type="button">구매확정</button>
+                    <button class="btn btn-primary" type="button">상품교환</button>
                     <button class="btn btn-primary" type="button">환불</button>
                 </div>    
 
         </div>
+
+
+
+
+        
 
         <footer>
             <div class="footer-1 center">
