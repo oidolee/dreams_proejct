@@ -90,6 +90,7 @@ swiper-slide img {
 }
 
 .section-2-con .news-1 .card {
+    width: 25rem;
     margin-right: 10px;
     overflow: hidden;
 }
@@ -186,7 +187,7 @@ swiper-slide img {
 }
 
 .imgBox_second{
-    width: 398px; height: 265px;
+    max-width: 398px; height: 265px;
     background-size: 100%;
 }
 
@@ -269,6 +270,10 @@ swiper-slide img {
         flex-direction: column;
     }
 
+    .section-1-bottom ul img{
+        width: 100%;
+    }
+
     .footer-list-box {
         flex-direction: column;
     }
@@ -331,6 +336,19 @@ swiper-slide img {
 }
 
 @media screen and (max-width:560px) {
+    .section-2-con .news-title{
+        flex-direction: column;
+    }
+    .section-2-con .news-1 .card{
+        margin: 0;
+    }
+
+    .section-2-con .news-1 .card {
+        max-width: 320px;
+        margin-right: 10px;
+        overflow: hidden;
+    }
+
     .footer-1 {
         font-size: 14px;
     }
