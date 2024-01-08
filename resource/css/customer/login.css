@@ -41,13 +41,13 @@ div.wideWrap {
 /* 로그인 */
 
 #login {
-    padding-bottom: 320px;
+    padding-bottom: 50px;
     /* border-bottom: 1px solid #626262; */
     text-align: center;
   }
 
   #login p {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #000;
     color: #010101;
     font-size: 1.67em;
