@@ -60,3 +60,9 @@
    font-size: 15px;
    padding: 8px 15px 8px 15px;
 }
+
+
+#userId, #userPwd, #userRePwd, #userName, #brithDay {
+   font-size: 14px;
+   opacity: 80%;
+}
