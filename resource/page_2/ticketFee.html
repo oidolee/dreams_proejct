@@ -187,6 +187,13 @@
         }
 
     </style>
+    <script> 
+        function openNewWindow() {
+            
+            // 새 창 열기
+            window.open('purchase.html', '_blank', 'width=882, height=530');
+         }
+      </script>
 </head>
 <div class="wrap">
 
@@ -417,8 +424,8 @@
                     <h1 style="margin-top: 50px;">듬린이(어린이 회원)</h1>
                 </div>
                 <div class="ticket-reservation">
-					<input style="margin-right: 10px;" id="ticketbutton" type="button" value="티켓 예약 확인 / 취소">
-					<input id="ticketbutton" type="button" value="티켓예약" >
+					<input style="margin-right: 10px;" id="ticketbutton" type="button" value="티켓 예약 확인 / 취소" >
+					<input id="ticketbutton" type="button" value="티켓예약" onclick="openNewWindow()">
 				</div>
                 <table style="margin-bottom: 50px; margin-top: 40px; " align="center" >
                     <tr>
