@@ -195,6 +195,7 @@ div.pageNav span.prev1 a:first-child, div.pageNav span.next1 a:first-child {
    background-color: #1c5c50 !important;
    color: #fff !important;
    border-radius: 4px;
+   width: 80px;
 
  }
 /* 게시판 글쓰기 종료 */
