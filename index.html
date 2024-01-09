@@ -27,6 +27,63 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <!-- header.js -->
     <script src="./resource/js/common/header.js"></script>
+    <style>
+        .floating-box {
+            width: 50px;
+            height: 50px;
+            background: url("./resource/image/logoSmall.png") no-repeat 50% 50%;
+            background-size: 110px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            animation: floatUpDown 1s infinite alternate;
+            transition: transform 0.3s;
+        }
+    
+        .floating-box:hover {
+            transform: translateY(-5px);
+        }
+    
+        .floating-box::before {
+            content: "드림즈 관리자";
+            white-space: pre-line;
+            position: absolute;
+            width: 58px;
+            text-align: center;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1c5c50;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        .floating-box:hover::before {
+            opacity: 1;
+        }
+    
+        @keyframes floatUpDown {
+            from {
+                transform: translateY(0);
+            }
+    
+            to {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+    
 
     <script>
         // 페이지 로드 후 실행될 함수
@@ -223,16 +280,11 @@
 
         <div id="slider_con" class="slider-con">
             <div class="slider-box">
-                <!-- <swiper-container class="mySwiper" pagination="true" loop="true"> -->
-                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
-                    space-between="30" centered-slides="true" autoplay-delay="2000"
-                    autoplay-disable-on-interaction="false">
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/dreams_main_01.jpg"
-                            alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_01.jpg"
-                            alt="main"></swiper-slide>
-                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/main_02.jpg"
-                            alt="main"></swiper-slide>
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true"  autoplay-delay="2000" autoplay-disable-on-interaction="false" >
+                <!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" > -->
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/dreams_main_01.jpg" alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/dreams_main_02.jpg" alt="main"></swiper-slide>
+                    <swiper-slide><img style="width: 100%;" src="./resource/image/main/dreams_main_03.jpg" alt="main"></swiper-slide>
                 </swiper-container>
 
             </div>
@@ -245,9 +297,8 @@
                 </div>
                 <div class="section-1-bottom">
                     <ul>
-                        <li><a href="#"><img
-                                    src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item1.png"
-                                    alt=""></a></li>
+                        <li><a href="#">
+                            <img src="./resource/image/main/dreams_char.png"alt=""></a></li>
                         <li><a href="#"><img
                                     src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/index/btn_link_toolbar_item2.png"
                                     alt=""></a></li>
@@ -386,6 +437,10 @@
         <div id="goTop" class="goTop">
             <a href="#header"></a>
         </div>
+        <a href="./resource/admin/index.html">
+            <div class="floating-box"></div>
+        </a>
+        
         <footer>
             <div class="footer-1 center">
                 <div class="footer-list-box">
