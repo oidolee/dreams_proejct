@@ -172,13 +172,14 @@
         </div>
 
         <div class="goods">
-            <h2>상품 환불</h2>
+            <h2><br>상품 환불<br><br></h2>
             <fieldset> 
-                <legend> 최근 구매한 상품 </legend>
+                <legend> 최근 구매한 상품<hr> </legend>
                 <table class="table" align="center">
                     <thead>
                       <tr>
                         <th scope="col">선택</th>
+                        <th scope="col">주문번호</th>
                         <th scope="col">사진</th>
                         <th scope="col">상품명</th>
                         <th scope="col">수량</th>
@@ -190,6 +191,7 @@
                     <tbody class="table-group-divider">
                       <tr>
                         <td><label><input type="checkbox" name="goods" value="ball1"> </label></td>
+                        <td>20240107A001</td>
                         <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
                         <td>로고볼(소)</td>
                         <td>1개</td>
@@ -199,6 +201,7 @@
                       </tr>
                       <tr>
                         <td><label><input type="checkbox" name="goods" value="ball2"> </label></td>
+                        <td>20240107A002</td>
                         <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
                         <td>로고볼(소)</td>
                         <td>1개</td>
@@ -208,6 +211,7 @@
                       </tr>
                       <tr>
                         <td><label><input type="checkbox" name="goods" value="ball3"> </label></td>
+                        <td>20240107A003</td>
                         <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
                         <td>로고볼(소)</td>
                         <td>1개</td>
@@ -222,10 +226,23 @@
             <div>
                 
                 
-                <table >
+                <table>
+                    <h2>환불 신청서<br><br></h2>
+                    <tr>
+                        <th align="right"><label for="orderNo">주문번호</label></th>
+                        <td align="left"><input type="text" id="orderNo" name="orderNo" size="20" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <th align="right"><label for="goods_name">상품명</label></th>
+                        <td><input type="text" id="goods_name" name="goods_name" size="100" required></td>
+                    </tr>
+                    <tr>
+                        <th align="left"><label for="goods_cnt"></label>개수</th>
+                        <td align="left"><input type="text" id="goods_cnt" name="goods_cnt" size="3" required></td>
+                    </tr>
                     <tr>
                         <th align="center"><label for="refundreason">환불 사유</label></th>
-                        <td><input type="text" id="id" name="refundreason" size="100" placeholder="이미지를 첨부해주세요." autofocus required></td>
+                        <td><input type="text" id="refundreason" name="refundreason" size="100" placeholder="상세한 사유를 적어주세요." required></td>
                     </tr>
                     <tr>
                         <td align="left"><label for="attachFile"></label></td>
@@ -233,18 +250,17 @@
                     </tr>
                     <tr>
                         <th align="center"><label for="refundaccount"> 계좌 번호</label></th>
-                        <tr>
-                            <td>
-                                <select name="bank" style="width:100px" ">
-                                    <option value="keb">국민은행</option>
-                                    <option value="hana">하나은행</option>
-                                    <option value="woori">우리은행</option>
-                                    <option value="kakao">카카오뱅크</option>
-                                 </select>
-                            </td>				
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="bank" style="width:100px" ">
+                                <option value="keb">국민은행</option>
+                                <option value="hana">하나은행</option>
+                                <option value="woori">우리은행</option>
+                                <option value="kakao">카카오뱅크</option>
+                            </select>
                             <td align="left"><input type="text" id="pwd" name="userpwd" size="100" placeholder="" required></td>
-                        </tr>
-                        
+                        </td>				
                     </tr>
                     
                     <tr>
