@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>굿즈 반품</title>
+    <title>굿즈 교환/환불</title>
 
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -60,6 +60,20 @@
             border-spacing: 2px;
             border-collapse: separate;
         }
+        
+        thead tr th {
+            font-weight: bold;
+            vertical-align: middle !important;
+        }
+
+        tbody tr td {
+            vertical-align: middle;
+        }
+
+        .form tr label {
+            color: #000 !important;
+        }
+        
     </style>
 
 
@@ -172,9 +186,9 @@
         </div>
 
         <div class="goods">
-            <h2><br>상품 환불<br><br></h2>
+            <h2 style="color: #000 !important; font-weight: bold;"><br>상품 교환/환불<br><br></h2>
             <fieldset> 
-                <legend> 최근 구매한 상품<hr> </legend>
+                <legend style="color: #000 !important; font-weight: bold;"> 최근 구매한 상품<hr> </legend>
                 <table class="table" align="center">
                     <thead>
                       <tr>
@@ -226,53 +240,66 @@
             <div>
                 
                 
-                <table>
-                    <h2>환불 신청서<br><br></h2>
+                <table class="form">
+                    <h2 style="color: #000 !important; font-weight: bold;"><br>교환/환불 신청서<br><br></h2>
                     <tr>
-                        <th align="right"><label for="orderNo">주문번호</label></th>
+                        <th align="center"><label for="orderNo">주문번호</label></th>
                         <td align="left"><input type="text" id="orderNo" name="orderNo" size="20" autofocus required></td>
                     </tr>
                     <tr>
-                        <th align="right"><label for="goods_name">상품명</label></th>
-                        <td><input type="text" id="goods_name" name="goods_name" size="100" required></td>
+                        <th align="center"><label for="orderName">성명</label></th>
+                        <td align="left"><input type="text" id="orderName" name="orderName" size="20" autofocus required></td>
                     </tr>
                     <tr>
-                        <th align="left"><label for="goods_cnt"></label>개수</th>
+                        <th align="center"><label for="orderName">연락처</label></th>
+                        <td align="left"><input type="text" id="orderName" name="orderName" size="20" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <th align="center"><label for="orderAddress">주소</label></th>
+                        <td align="left"><input type="text" id="orderAddress" name="orderAddress" size="100" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <th align="center"><label for="goods_name">상품명</label></th>
+                        <td align="left"><input type="text" id="goods_name" name="goods_name" size="50" required></td>
+                    </tr>
+                    <tr>
+                        <th align="center"><label for="goods_cnt">개수</label></th>
                         <td align="left"><input type="text" id="goods_cnt" name="goods_cnt" size="3" required></td>
                     </tr>
                     <tr>
-                        <th align="center"><label for="refundreason">환불 사유</label></th>
-                        <td><input type="text" id="refundreason" name="refundreason" size="100" placeholder="상세한 사유를 적어주세요." required></td>
+                        <th align="center"><label for="userMessage"> 교환/환불 사유 </label></th>
+                        <td align="left"><textarea name="user_message" id="userMessage" cols="40" rows="5"></textarea></td>
                     </tr>
                     <tr>
-                        <td align="left"><label for="attachFile"></label></td>
+                        <td align="center"><label for="attachFile"> 파일 첨부 </label></td>
                         <td align="left"><input type="file"></td>
                     </tr>
                     <tr>
-                        <th align="center"><label for="refundaccount"> 계좌 번호</label></th>
-                    </tr>
-                    <tr>
-                        <td>
+                        <th align="center"><label for="refundaccount"> 환불시 계좌 번호</label></th>
+                        <td align="left">
                             <select name="bank" style="width:100px" ">
                                 <option value="keb">국민은행</option>
                                 <option value="hana">하나은행</option>
                                 <option value="woori">우리은행</option>
                                 <option value="kakao">카카오뱅크</option>
                             </select>
-                            <td align="left"><input type="text" id="pwd" name="userpwd" size="100" placeholder="" required></td>
-                        </td>				
+                            <input type="text" id="pwd" name="userpwd" size="100" placeholder="" required></td>
+                        </td>		
                     </tr>
-                    
                     <tr>
                         <td colspan="2"><br>
                             <div align = "center">
-                                <input type = "submit" value="상품 환불 신청">
-                                <input type = "reset" value="재작성">
+                                <button class="btn btn-primary" type="button" style="color: #fff !important;">상품환불</button>
+                                <button class="btn btn-primary" type="button" style="color: #fff !important;">상품교환</button>
+                                <a href="./myPage.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">취소</button></a>
                             </div>
                         </td>	
                     </tr>
                     
+                    
                 </table>
+
+
             </div>
 
         <footer>

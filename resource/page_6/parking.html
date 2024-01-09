@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주차안내</title>
+
 <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
     <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -57,20 +65,35 @@
             margin: auto;
         }
 
-        .amenity-contents {
+        .stadium-content {
             text-align: center;
         }
 
+        .stadium-tab {
+            margin: auto;
+            height: 30px; 
+            width: 850px;
+            
+           
+        }
         .stadium-tab li {
            
            list-style: none;
-           display: inline-flex;
+           display: inline-block;
            width: 150px;
            font-weight: bold;
-        }
+           margin: 0;
+           
+       }
 
         .stadium-tab .menuLink:hover {
-            color: black !important;
+            color: #1c5c50 !important;
+            
+        }
+
+        .stadium-detail-table {
+            display: inline-block;
+            padding: 10px;
             
         }
 
@@ -95,11 +118,31 @@
 
         .table-title {
             font-weight: bold !important;
-            border: 1px solid black;
+            border: 1px solid black !important;
         }
 
-        .table-detail {
+        .menuLink {
+            color: black !important;
+            font-weight: bold !important;
+        }
+
+        thead {
             vertical-align: middle !important;
+            border-bottom: #000 2px solid;
+            border-top: #000 2px solid; 
+        }
+        tbody {
+            border-collapse: separate;
+            text-align: center;
+            vertical-align: middle !important;
+        }
+
+        tbody td {
+            color: #000 !important;
+        }
+
+        thead tr th {
+            color: #000 !important;
         }
     </style>
 </head>
@@ -275,14 +318,19 @@
             </div>
         </div>
         
-        <div class="amenity-contents">
-            <h2><br><br>주차안내</h2><br>
+        <div class="stadium-content">
+            <h2 style="font-weight: bold; color: #000 !important;"><br><br>주차안내</h2><br>
             <ul class="stadium-tab">
                 <li><a class="menuLink" href="./stadium.html">고척 스카이돔</a></li>
                 <li><a class="menuLink" href="./amenity.html">편의시설</a></li>
                 <li><a class="menuLink" href="./location.html">찾아오시는 길</a></li>
-                <li><a class="menuLink" href="./parking.html">주차안내</a></li>
-            </ul><br>
+                <li style="
+                width: 151px;
+                background: #1c5c50;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 20px;"><a class="menuLink" href="./parking.html" style="color: #FFF !important">주차안내</a></li>
+            </ul><br><br><br>
 
             <div>
                 <h4><img src="https://heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficParking_230320.png" alt="주차안내" ></h4>
@@ -310,7 +358,7 @@
             
                 <tbody>
                     <tr>
-                        <td class="table-detail">고척산업용품<br>종합상가</td>
+                        <td>고척산업용품<br>종합상가</td>
                         <td>서울시 구로구<br>중앙로3길 50</td>
                         <td>800m<br>(도보10분)</td>
                         <td>24시간</td>
