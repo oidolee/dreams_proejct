@@ -187,9 +187,85 @@
 
         <!-- 마이페이지 시작 -->
         <div class="mypage">
-            <h2> <br>마이 페이지<br><br> </h2>
-            <a class="btn btn-primary" href="./seatRefund.html" role="button">티켓 환불</a>
-                <h3> <br> 최근 구매한 상품 <br><br></h3>
+            <h2 style="color: #000 !important; font-weight: bold;"> <br>마이 페이지<br><br> </h2>
+            <h4 style="color: #000 !important; font-weight: bold;"> <br>최근 구매한 티켓 <br><br></h4>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">주문번호</th>
+                        <th scope="col">경기 일자</th>
+                        <th scope="col">좌석</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">가격</th>
+                        <th scope="col">구매일자</th>
+                        <th scope="col">배송</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr>
+                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
+                        <td>20240107T001</td>
+                        <td>2024년 4월 3일</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot12.png">외야지정석</td>
+                        <td>일반</td>
+                        <td>3개</td>
+                        <td>39,000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
+                        <td>20240107T002</td>
+                        <td>2024년 4월 3일</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot01.png">R.d club(로얄다이아몬드클럽)</td>
+                        <td>일반</td>
+                        <td>2개</td>
+                        <td>170,000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
+                        <td>20240107T003</td>
+                        <td>2024년 4월 3일</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot03.png">1층 테이블석</td>
+                        <td>일반</td>
+                        <td>2개</td>
+                        <td>150,000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>결제완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
+                        <td>20240107T004</td>
+                        <td>2024년 4월 3일</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot04.png">2층 테이블석</td>
+                        <td>일반</td>
+                        <td>3개</td>
+                        <td>150,000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송중</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
+                        <td>20240107T005</td>
+                        <td>2024년 4월 3일</td>
+                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot05.png">내야커플석</td>
+                        <td>일반</td>
+                        <td>2개</td>
+                        <td>90,000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송중</td>
+                      </tr>
+                      
+                    </tbody>
+                </table><br>
+
+            <a class="btn btn-primary" href="./seatRefund.html" role="button" style="color: aliceblue !important; ">티켓 환불</a><br><br>
+
+            <h4 style="color: #000 !important; font-weight: bold;"> <br> 최근 구매한 상품 <br><br></h4>
                 <table class="table">
                     <thead>
                       <tr>
@@ -238,17 +314,11 @@
                 </table>
 
                 <div class="mypage-button">
-                    <button class="btn btn-primary" type="button">구매확정</button>
-                    <button class="btn btn-primary" type="button">상품교환</button>
-                    <button class="btn btn-primary" type="button">환불</button>
+                    <button class="btn btn-primary" type="button" style="color: #fff !important;">구매확정</button>
+                    <a href="goodsRefund.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">교환/환불</button></a>
                 </div>    
 
         </div>
-
-
-
-
-        
 
         <footer>
             <div class="footer-1 center">

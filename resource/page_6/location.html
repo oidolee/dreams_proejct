@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찾아오시는 길</title>
+
 <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
     <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -86,26 +94,31 @@
         }
         
         /*  */
-        #amenity-container {
-            margin: auto;
-        }
+        
 
-        .amenity-contents {
+        .stadium-content {
             text-align: center;
-            color:#000 !important;
-            font-weight: bold;
+            
         }
 
         .stadium-tab li {
            
            list-style: none;
-           display: inline-flex;
+           display: inline-block;
            width: 150px;
            font-weight: bold;
+           margin: 0;
+        }
+        .stadium-tab {
+            margin: auto;
+            height: 30px; 
+            width: 850px;
+            
+           
         }
 
         .stadium-tab .menuLink:hover {
-            color: black !important;
+            color: #1c5c50 !important;
             
         }
 
@@ -113,6 +126,35 @@
             text-align: center;
             vertical-align: auto;
             border: 1px solid;
+        }
+
+        .menuLink {
+            color: black !important;
+            font-weight: bold !important;
+        }
+
+        thead {
+            vertical-align: middle !important;
+            border: #000 1px solid;
+            border-bottom: #000 2px solid;
+        }
+
+        thead th {
+            color: #000 !important;
+        }
+
+
+        tbody {
+            vertical-align: middle !important;
+            border: #000 1px solid !important;
+        }
+
+        tbody  tr td {
+            color: #000 !important;
+        }
+
+        tbody tr th {
+            color: #000 !important;
         }
     </style>
 </head>
@@ -288,14 +330,19 @@
             </div>
         </div>
 
-        <div class="amenity-contents">
-            <h2><br><br> 찾아오시는 길</h2><br>
+        <div class="stadium-content">
+            <h2 style="font-weight: bold; color: #000 !important;"><br><br> 찾아오시는 길</h2><br>
             <ul class="stadium-tab">
                 <li><a class="menuLink" href="./stadium.html">고척 스카이돔</a></li>
                 <li><a class="menuLink" href="./amenity.html">편의시설</a></li>
-                <li><a class="menuLink" href="./location.html">찾아오시는 길</a></li>
+                <li style="
+                width: 151px;
+                background: #1c5c50;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 20px;"><a class="menuLink" href="./location.html" style="color: #FFF !important">찾아오시는 길</a></li>
                 <li><a class="menuLink" href="./parking.html">주차안내</a></li>
-            </ul><br>
+            </ul><br><br><br>
 
             <div>
                 <img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/heroes/imgTrafficSubway_2023.png" alt="찾아오시는 길" >
@@ -306,36 +353,14 @@
 
             <div >
                 <p>
-                <!-- <table border="2" width="1000" height="400" align="center" padding="80px" id="location-container">
-                    <tr>
-                        <td>신도림역</td>
-                        <td>1호선</td>
-                        <td colspan="8">1번, 5번 출구에서 버스 이용 시 3정거장 소요<br>버스 : 160번 외 9개 노선운행</td>
-                    </tr>
-                    <tr>
-                        <td>구로역</td>
-                        <td>1호선</td>
-                        <td colspan="8">2번 출구에서 좌회전하여 1km 직진 후, 고척교 건너 좌측 위치(도보 약 20분)<br>버스: 5712번, 5626번</td>
-                    </tr>
-                    <tr>
-                        <td>개봉역</td>
-                        <td>1호선</td>
-                        <td colspan="8">2번 출구에서 200m 직진 후, 우회전하여 650m 직진 후 우측 위치(도보 약 15분)<br>버스: 마을버스06번 (고척교 방향)</td>
-                    </tr>
-                    <tr>
-                        <td>구일역</td>
-                        <td>1호선</td>
-                        <td colspan="8">2번 출구에서 약 100m 직진 후 고척스카이돔 정면 출입문 게이트 통해 입장 (도보 약 3분)<br>버스 이용 필요 없음</td>
-                    </tr>
-
-                </table> -->
+                
                 <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">번호</th>
-                        <th scope="col">지하철역</th>
-                        <th scope="col">호선</th>
-                        <th scope="col">오시는 길</th>
+                        <th scope="col" style="font-weight: bold;">번호</th>
+                        <th scope="col" style="font-weight: bold;">지하철역</th>
+                        <th scope="col" style="font-weight: bold;">호선</th>
+                        <th scope="col" style="font-weight: bold;">오시는 길</th>
                       </tr>
                     </thead>
                     <tbody class="table-group-divider">
@@ -366,8 +391,8 @@
                       
                       
                     </tbody>
-                  </table>
-            </p>
+                </table>
+                </p>
             </div>
 
        
