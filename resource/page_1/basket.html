@@ -98,24 +98,7 @@
 
     </style>
 
-    <script type="text/javascript">
-        function calculateTotal() {
-            const quantity = parseInt(document.getElementById('stdNum').value);
-            const priceItem = 80000;
-            const totalPrice = quantity * priceItem;
 
-            const quantity2 = parseInt(document.getElementById('stdNum2').value);
-            const priceItem2 = 120000;
-            const totalPrice2 = quantity2 * priceItem2;
-            const totalAll = totalPrice + totalPrice2;
-
-            document.getElementById('totalPrice').textContent = totalPrice.toLocaleString() + '원';
-            document.getElementById('totalPrice2').textContent = totalPrice2.toLocaleString() + '원';
-            document.getElementById('totalAll').textContent = totalAll.toLocaleString();
-            document.getElementById('totalAll2').textContent = totalAll.toLocaleString();
-
-        }
-    </script>
 </head>
 <div class="wrap">
 
@@ -324,7 +307,7 @@
                                             <!-- 장바구니 목록 -->
                                             <tr>
                                                 <td>
-                                                    <label><input type="checkbox" name="check1" value="check1"></label>
+                                                    <label><input type="checkbox" class="itemCheckbox" name="check1" value="check1"></label>
                                                 </td>
                                                 <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAyMTRfMjg0%2FMDAxNTgxNjQ5ODE2MjA1.nQ6nx80RlsMeIAhg7NqZtQi_RF-EQBvjejekIDAo0-Eg.VELqjExMNTIq5sf1qODKc7FoHxXh8cho39mt8x8zlNUg.JPEG.gamzatan%2F20200214_121001.jpg&type=sc960_832" width="250" height="250"></image> </td>
                                                 <td style="color: #000 !important;"> [선착순한정] [LOCKERDIUM] 스토브리그 드림즈 멤버십 패키지(HOME) </td>
@@ -338,7 +321,7 @@
         
                                             <tr>
                                                 <td>
-                                                    <label><input type="checkbox" name="check1" value="check1"></label>
+                                                    <label><input type="checkbox" class="itemCheckbox" name="check1" value="check1"></label>
                                                 </td>
                                                 <td> <image src="https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDAyMDVfNzUg%2FMDAxNTgwODY4MDMzOTU5._3Pnin3euDMyv0KR4dZVzT-Rsq2q4TRemMF3bbXwJQMg.RgwJ1gXIwEqKn56p0hSPIu4VuIqJWmRHy1ZLyoN_XCEg.PNG%2F%25C8%25C4%25B5%25E5%25C6%25BC.PNG&type=sc960_832" width="250" height="250"></image> </td>
                                                 <td style="color: #000 !important;"> [★3차] [LOCKERDIUM] 스토브리그 드림즈 후드티셔츠 </td>
@@ -439,6 +422,52 @@
 
             </div>
         </footer>
+        
+        <script type="text/javascript">
+            function calculateTotal() {
+                const quantity = parseInt(document.getElementById('stdNum').value);
+                const priceItem = 80000;
+                const totalPrice = quantity * priceItem;
+    
+                const quantity2 = parseInt(document.getElementById('stdNum2').value);
+                const priceItem2 = 120000;
+                const totalPrice2 = quantity2 * priceItem2;
+                const totalAll = totalPrice + totalPrice2;
+    
+                document.getElementById('totalPrice').textContent = totalPrice.toLocaleString() + '원';
+                document.getElementById('totalPrice2').textContent = totalPrice2.toLocaleString() + '원';
+                document.getElementById('totalAll').textContent = totalAll.toLocaleString();
+                document.getElementById('totalAll2').textContent = totalAll.toLocaleString();
+            }
+    
+            // 전체 선택 체크박스 요소 가져오기
+            const selectAllCheckbox = document.getElementById("selectAll");
+    
+            // 개별 아이템 체크박스들 요소 가져오기
+            const itemCheckboxes = document.querySelectorAll(".itemCheckbox");
+    
+            // 전체 선택 체크박스가 변경되었을 때의 이벤트 처리
+            selectAllCheckbox.addEventListener("change", function() {
+                const isChecked = this.checked;
+    
+                // 개별 아이템 체크박스들의 상태 변경
+                itemCheckboxes.forEach(function(checkbox) {
+                    checkbox.checked = isChecked;
+                });
+            });
+    
+            // 개별 아이템 체크박스들이 변경되었을 때의 이벤트 처리 (모든 아이템이 선택되었는지 확인)
+            itemCheckboxes.forEach(function(checkbox) {
+                checkbox.addEventListener("change", function() {
+                    const allChecked = [...itemCheckboxes].every(function(item) {
+                        return item.checked;
+                    });
+                    // 모든 개별 아이템이 선택되었는지 확인 후, 전체 선택 체크박스 상태 변경
+                    selectAllCheckbox.checked = allChecked;
+                });
+            });
+        </script>
+
     </body>
 </div>
 
