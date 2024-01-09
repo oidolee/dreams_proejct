@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편의시설</title>
+
 <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
     <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -106,6 +114,9 @@
             
         }
 
+        .card-title {
+            font-weight: bold;
+        }
         
 
     </style>
@@ -300,161 +311,250 @@
         <br>
         <br>
 
-        
-        <div id="amenity-container">
-            <ul>
-                <li>
-                    <strong>1.피자</strong>
-                    <span class="text">불고기 ,페페로니 피자</span>
-                    <span class="location">2번 통로 맞은편</span>
-                    <div id="photoDetailList_40" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>2.편의점</strong>
-                    <span class="text">캔맥주,음료,각종 스낵,마른 안주</span>
-                    <span class="location"> 2번 통로 맞은편</span>
-                    <div id="photoDetailList_36" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>3.닭꼬치,새우튀김</strong>
-                    <span class="text">닭꼬치,크림 새우,생맥주</span>
-                    <span class="location">4번 통로 맞은편</span>
-                    <div id="photoDetailList_78" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>4.편밀밀</strong>
-                    <span class="text">만두라자냐,만두고로케,체다치즈멘보샤</span>
-                    <span class="location">4번 통로 맞은편</span>
-                    <div id="photoDetailList_79" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>7.히어로즈 용품점</strong>
-                    <span class="text">선수 레플리카,모자,응원도구</span>
-                    <span class="location">7번 통로 맞은편</span>
-                    <div id="photoDetailList_80" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>8.원정용품점</strong>
-                    <span class="text">선수 레플리카, 모자, 응원도구</span>
-                    <span class="location">7번 통로 맞은편</span>
-                    <div id="photoDetailList_81" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>9.피자</strong>
-                    <span class="text">불고기,페페로니 피자</span>
-                    <span class="location">8번 통로 맞은편</span>
-                    
-                    <div id="photoDetailList_82" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>10.올떡볶이</strong>
-                    <span class="text">떡볶이,어묵,순대</span>
-                    <span class="location">9번 통로 맞은편</span>
-                    <div id="photoDetailList_28" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>11.편의점</strong>
-                    <span class="text">캔맥주,음료,각종 스낵,마른 안주</span>
-                    <span class="location">11번 통로 맞은편</span>
-                    <div id="photoDetailList_83" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>12.스테프핫도그</strong>
-                    <span class="text">스테프핫도그,메디스터 소시지</span>
-                    <span class="location">11번 통로 맞은편</span>
-                    <div id="photoDetailList_30" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>13.맘스터치</strong>
-                    <span class="text">싸이버거,불싸이버거,불고기버거</span>
-                    <span class="location">3-4번 통로 사이</span>
-                    <div id="photoDetailList_93" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>13.BBQ</strong>
-                    <span class="text">핫윙,파더스 치킨,황금 치즈볼</span>
-                    <span class="location">3~4번 통로 사이</span>
-                    <div id="photoDetailList_84" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>14.올떡볶이</strong>
-                    <span class="text">떡볶이,어묵,순대</span>
-                    <span class="location">3~4번 통로 사이</span>
-                    <div id="photoDetailList_85" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>15.탐앤탐스</strong>
-                    <span class="text">아메리카노,스무디</span>
-                    <span class="location">3-4번 통로 사이</span>
-                    <div id="photoDetailList_29" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>16.스테프 핫도그</strong>
-                    <span class="text">스테프 핫도그,메디스터 소시지</span>
-                    <span class="location">3-4번 통로 사이</span>
-                    <div id="photoDetailList_92" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>17.BHC(가판)</strong>
-                    <span class="text">순살 뿌링클,바삭클 치즈볼,뿌링 핫도그</span>
-                    <span class="location">5번, 9번 통로 맞은편</span>
-                    <div id="photoDetailList_75" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>18.마왕족발</strong>
-                    <span class="text">족발 도시락,족발 만두</span>
-                    <span class="location">9~10번 통로 사이</span>
-                    <div id="photoDetailList_86" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>19.맘스터치</strong>
-                    <span class="text">싸이버거,불싸이버거,불고기버거</span>
-                    <span class="location">9~10번 통로 사이</span>
-                    <div id="photoDetailList_94" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>19.BBQ</strong>
-                    <span class="text">핫윙,파더스 치킨,황금 치즈볼</span>
-                    <span class="location">9~10번 통로 사이</span>
-                    <div id="photoDetailList_87" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>20.투다리</strong>
-                    <span class="text">닭꼬치,야끼 교자 만두,회오리 감자</span>
-                    <span class="location">9-10번 통로 사이</span>
-                    <div id="photoDetailList_33" style="display:none"></div>
-                </li>
-                
-                <li>
-                    <strong>21.탐앤탐스</strong>
-                    <span class="text">아메리카노,스무디</span>
-                    <span class="location">9~10번 통로 사이</span>
-                    <div id="photoDetailList_88" style="display:none"></div>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <!-- 1행 -->
+            <div class="row">
+                <!-- 1열 -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">1.피자</h5>
+                        <p class="card-text"><br>불고기 ,페페로니 피자<br><hr></p>
+                        <p class="card-text">2번 통로 맞은편</p>
+                      </div>
+                    </div>
+                  </div>
+              
+                <!-- 2열 -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">2.편의점</h5>
+                        <p class="card-text">캔맥주,음료,각종 스낵,마른 안주<hr></p>
+                        <p class="card-text">2번 통로 맞은편</p>
+                      </div>
+                    </div>
+                  </div>
+              
+                <!-- 3열 -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">3.닭꼬치,새우튀김</h5>
+                        <p class="card-text">닭꼬치,크림 <br>새우,생맥주<hr></p>
+                        <p class="card-text">4번 통로 맞은편</p>
+                      </div>
+                    </div>
+                  </div>
+             
+                <!-- 4열 -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">4.편밀밀</h5>
+                        <p class="card-text">만두라자냐,만두고로케,체다치즈멘보샤<hr></p>
+                        <p class="card-text">4번 통로 맞은편</p>
+                      </div>
+                    </div>
+                  </div>
+            </div> <!-- row --> 
+            <!-- ************************************************************************* -->
+            <!-- 2행 -->
+                <br>
+            <div class="row">
+                <!-- 1열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">7.히어로즈 용품점</h5>
+                        <p class="card-text">선수 레플리카,모자,응원도구<hr></p>
+                        <p class="card-text">7번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 2열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">8.원정용품점</h5>
+                        <p class="card-text">선수 레플리카, 모자, 응원도구<hr></p>
+                        <p class="card-text">7번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 3열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">9.피자</h5>
+                        <p class="card-text"><br>불고기,페페로니 피자<hr></p>
+                        <p class="card-text">8번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 4열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">10.올떡볶이</h5>
+                        <p class="card-text"><br>떡볶이,어묵,순대<hr></p>
+                        <p class="card-text">9번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div> <!-- row  -->
+            </div>    
+            <!-- ************************************************************************* -->
+            <!-- 3행 -->
+            <br>
+            <div class="row">
+                <!-- 1열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">11.편의점</h5>
+                        <p class="card-text">캔맥주,음료,각종 스낵,마른 안주<hr></p>
+                        <p class="card-text">11번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 2열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">12.스테프핫도그</h5>
+                        <p class="card-text">스테프핫도그,메디스터 소시지<hr></p>
+                        <p class="card-text">11번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 3열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">13.맘스터치</h5>
+                        <p class="card-text">싸이버거,불싸이버거,불고기버거<hr></p>
+                        <p class="card-text">3-4번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 4열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">13.BBQ</h5>
+                        <p class="card-text">핫윙,파더스 치킨,황금 치즈볼<hr></p>
+                        <p class="card-text">3~4번 통로 사이</p>
+                      </div>
+                    </div>
+                </div> 
+            </div>    <!-- row  -->
+            <!-- ************************************************************************* -->
+            <!-- 4행 -->
+            <br>
+            <div class="row">
+                <!-- 1열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">14.올떡볶이</h5>
+                        <p class="card-text">떡볶이,어묵,순대<hr></p>
+                        <p class="card-text">3~4번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 2열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">15.탐앤탐스</h5>
+                        <p class="card-text">아메리카노,스무디<hr></p>
+                        <p class="card-text">3-4번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 3열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">16.스테프 핫도그</h5>
+                        <p class="card-text">스테프 핫도그,메디스터 소시지<hr></p>
+                        <p class="card-text">3-4번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 4열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">17.BHC(가판)</h5>
+                        <p class="card-text">순살 뿌링클,바삭클 치즈볼,뿌링 핫도그<hr></p>
+                        <p class="card-text">5번, 9번 통로 맞은편</p>
+                      </div>
+                    </div>
+                </div> <!-- row  -->
+            </div>
         </div>
+        <!-- ************************************************************************* -->
+        <!-- 5행 -->
+            <br>
+            <div class="row">
+                <!-- 1열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">18.마왕족발</h5>
+                        <p class="card-text">족발 도시락,족발 만두<hr></p>
+                        <p class="card-text">9~10번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 2열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">19.맘스터치</h5>
+                        <p class="card-text">싸이버거,불싸이버거,불고기버거<hr></p>
+                        <p class="card-text">9~10번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 3열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">19.BBQ</h5>
+                        <p class="card-text">핫윙,파더스 치킨,황금 치즈볼<hr></p>
+                        <p class="card-text">9~10번 통로 사이</p>
+                      </div>
+                    </div>
+                </div>
+              
+                <!-- 4열 -->
+                <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">20.투다리</h5>
+                        <p class="card-text">닭꼬치,야끼 교자 만두,회오리 감자<hr></p>
+                        <p class="card-text">9-10번 통로 사이</p>
+                      </div>
+                    </div>
+                </div> <!-- row  -->
+            
 
-        
-
+            </div>
+        </div>
+        <br><br><br><br><br><br>
         <footer>
             <div class="footer-1 center">
                 <div class="footer-list-box">

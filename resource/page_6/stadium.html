@@ -98,28 +98,43 @@
 
         .stadium-skydome-detail li{
             margin-left: auto;
-            text-align: center;
+            margin-right: auto;
+            
         }
 
         .stadium-tab {
             margin: auto;
             height: 30px; 
             width: 850px;
+            
            
         }
 
         .stadium-tab li {
            
             list-style: none;
-            display: inline-flex;
+            display: inline-block;
             width: 150px;
             font-weight: bold;
+            
         }
 
         .stadium-tab .menuLink:hover {
             color: black !important;
             
         }
+
+        .stadium-detail-table {
+            display: inline-block;
+            padding: 10px;
+            
+        }
+
+        .stadium-tab li {
+            margin: 0;
+        }
+
+        
     </style>
 </head>
 <div class="wrap">
@@ -289,40 +304,46 @@
         <div class="slider-con">
             <div class="slider-box">
                 <img style="width: 100%;"
-                    src="https://www.heroesbaseball.co.kr/files/mainSlide_File.1//2023/03/10/5565d2f4-d6a5-46b2-9f92-78ca54cb776e.jpg"
+                    src="../image/main/dreams_main_01.jpg"
                     alt="main">
             </div>
         </div>
 
         <div class="stadium-content">
-            <h2><br>고척 스카이돔</h2><br>
+            <h2><br><br>고척 스카이돔</h2><br>
             <ul class="stadium-tab">
                 <li><a class="menuLink" href="./stadium.html">고척 스카이돔</a></li>
                 <li><a class="menuLink" href="./amenity.html">편의시설</a></li>
                 <li><a class="menuLink" href="./location.html">찾아오시는 길</a></li>
                 <li><a class="menuLink" href="./parking.html">주차안내</a></li>
             </ul><br>
-
-            
         </div>
         <br>
         <br>
 
-        
             <div class="stadium-skydome">
                 <h4><img src="https://www.heroesbaseball.co.kr/html/front/web/images/heroes/bgSkydome.jpg" alt="고척 스카이돔" ></h4>
-                    <div class="stadium-skydome-detail">
+                <div class="stadium-skydome-detail">
                     <br>
-                    <ul>
-                        <li>· 서울특별시 구로구 경인로 430</li>
-                        <li>· 규모 지하2층, 지상 4층</li>
-                        <li>· 연면적 83,623㎡(대지면적58,992㎡, 건축면적 29,120㎡)</li>
-                        <li>· 관람석 16,744석</li>
-                        <li>· 중앙펜스 122m, 좌우펜스 99m, 펜스높이4m</li>
-                    </ul>
+                    <table class="stadium-detail-table">
+                    <tr> 
+                        <td>· 서울특별시 구로구 경인로 430</td>
+                    </tr>
+                    <tr>
+                        <td>· 규모 지하2층, 지상 4층</td>
+                    </tr>
+                    <tr>
+                        <td>· 연면적 83,623㎡(대지면적58,992㎡, 건축면적 29,120㎡)</td>
+                    </tr>
+                    <tr>
+                        <td>· 관람석 16,744석</td>
+                    </tr>
+                    <tr>
+                        <td>· 중앙펜스 122m, 좌우펜스 99m, 펜스높이4m</td>
+                    </tr>
+                    </table>
                     <br>
                     <br>
-
                 </div>
             </div>
         </div>

@@ -93,10 +93,29 @@
 </style>
 
 <script type="text/javascript">
-	if (!document.joinform.userid.value) {
-		alert("아이디를 입력해주세요");
-		document.joinform.userid.focus();
-		return false;
+	function inputChk() {
+
+		// 아이디 입력확인
+		if (!document.joinform.userid.value) {
+			alert("아이디를 입력해주세요");
+			document.joinform.userid.focus();
+			return false;	// 동작 중지
+		}
+
+		// 비밀번호 입력확인
+		if (!document.joinform.userid.value) {
+			alert("비밀번호를 입력해주세요");
+			document.joinform.userid.focus();
+			return false;	// 동작 중지
+		}
+
+		// 비밀번호 재입력확인
+		if (!document.joinform.userid.value) {
+			alert("아이디를 입력해주세요");
+			document.joinform.userid.focus();
+			return false;	// 동작 중지
+		}
+
 	}
 </script>
 
@@ -224,7 +243,7 @@
                 <div id="section2">
                     <div id="s2_inner">
                         <div class="join" >
-                            <form name="joinform" action="joinAction.html" method="post" >   <!-- post : 노출x / get : 노출o -->
+                            <form name="joinform" action="joinAction.html" method="post" onsubmit="return inputChk()">   <!-- post : 노출x / get : 노출o -->
 								<table>
                                     <tr>
                                         <th>
@@ -271,6 +290,30 @@
                                         </td>
                                     </tr>
 
+								
+									<tr>
+										<th rowspan="3">
+											<label for="Hp1" style="color: #ffffff  !important;">  주소</label>
+										</th>
+										<td style="border-bottom: none; ">
+											<input type="text" class="input" id="Hp1" name="hp1" size="3" style="width: 60px; height: 30px; "  >  
+											-
+											<input type="text" class="input" name="hp2" size="3" style="width: 60px; height: 30px;"  > 
+											<input type="button" class="input" name="hp3" size="4" style="width: 90px; padding-right: 10px; height: 30px; color: #000000  !important; font-size: 90%;" value="우편번호▶" onclick="location.href='https://www.epost.go.kr/search.RetrieveNewAddressNewZipCdList.comm'" >   
+										</td>
+									</tr>
+									<tr>
+										<td style="border-bottom: none; padding: 0px 0px 0px 10px; color: #000000  !important; font-size: 90%; ">
+											<input type="text" class="input" name="adress1" size="8" style="width: 73%; height: 80%;">&nbsp;기본주소
+										</td>
+									</tr>	
+									<tr>
+										<td style="color: #000000  !important; font-size: 90%;">
+											<input type="text" class="input" name="adress2" size="8" style="width: 73%; height: 80%;">&nbsp;나머지주소
+
+										</td>
+									</tr>
+									
 
                                     <tr>
 										<th>
