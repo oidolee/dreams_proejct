@@ -62,14 +62,14 @@
                 break;
                 case "4층 지정석": bgNormalPrice = 9000,
                                 bgMPrice = 9000;
-                                bgCPrice = 	7000;
+                                bgCPrice = 7000;
                 break;
                 case "휠체어석": bgNormalPrice = 10000;
                                 bgMPrice = 50000;
                                 bgCPrice = 50000;
                 break;
-                case "외야지정석": bgNormalPrice = 9000,
-                                bgMPrice = 9000
+                case "외야 지정석": bgNormalPrice = 9000;
+                                bgMPrice = 9000;
                                 bgCPrice = 4000;
                 break;
                 case "외야 패밀리석 5인": bgNormalPrice = 100000;
@@ -80,7 +80,7 @@
                                 bgMPrice = 80000;
                                 bgCPrice = 80000;
                 break;
-                case "외야 유아동반석 2인": bgNormalPrice = 40000,
+                case "외야 유아동반석 2인": bgNormalPrice = 40000;
                                 bgMPrice = 40000;
                                 bgCPrice = 40000;
                 break;
@@ -101,57 +101,63 @@
             document.getElementById('finalTotalprice').textContent = finalTotalprice.toLocaleString() + '원';
             
         }
-        function openNewWindow() {
-            
-            // 새 창 열기
-            window.open('ticketFee.html', '_blank');
-         }
+        
 
          $(function(){
-	   $("#sign_In").submit(function(){
-		   if($("#result").length == 0){
-			   $("#sign_In").append("<div id='result'> 결과 출력 위치 </div>");
-		   }
-		   
-			// 1. validation check
-			// 아이디 입력 확인
-			if(!$("#user_id").val()){
-				$("#result").html("아이디를 입력하시오");
-				$("#user_id").focus();
-				return false; // 다음칸으로 내려가는 동작 중지
-			}
-			
-			// 생년월일 입력 확인
-			if(!$("#user_birthday").val()){
-				$("#result").html("생년월일을 선택하시오");
-				$("#user_birthday").focus();
-				return false;
-			}
-			// 연락처 입력 확인
-			if(!$("#user_hp").val()){
-				$("#result").html("연락처를 입력하시오");
-				$("#user_hp").focus();
-				return false;
-			}
-			// 성별 선택 확인
-			// <input type="radio"  name="userGender"  id="user_gender"  value="여자">여자
-			if(!$("input:radio[name='userGender']").is(":checked")){
-				$("#result").html("성별을 선택하시오");
-				$("input:radio[name='userGender']").eq(0).attr('checked', true); // .eq(0).attr('checked', true); 여성에 체크하는 속성을 추가
-				return false;
-			}
-			
-			// 이메일 입력 확인
-			if(!$("#user_email").val()){
-				$("#result").html("이메일을 입력하시오");
-				$("#user_email").focus();
-				return false;
-			}
-		   						
-		   return false; // 반드시 있어야 정상작동한다.!!!!!!
-	   }); //.submit() => submit버튼을 눌렀을 때
-	   // 
-   });
+	        $("#sign_In").submit(function(){
+                if($("#result").length == 0){
+                    $("#sign_In").append("<div id='result'> 입력완료 </div>");
+                }
+                
+                // 1. validation check
+                // 아이디 입력 확인
+                if(!$("#user_id").val()){
+                    $("#result").html("아이디를 입력하시오");
+                    $("#user_id").focus();
+                    return false; // 다음칸으로 내려가는 동작 중지
+                }
+                
+                // 생년월일 입력 확인
+                if(!$("#user_birthday").val()){
+                    $("#result").html("생년월일을 선택하시오");
+                    $("#user_birthday").focus();
+                    return false;
+                }
+                // 연락처 입력 확인
+                if(!$("#user_hp").val()){
+                    $("#result").html("연락처를 입력하시오");
+                    $("#user_hp").focus();
+                    return false;
+                }
+                
+                
+                // 이메일 입력 확인
+                if(!$("#user_email_1").val() || !$("#user_email_2").val()){
+                    $("#result").html("이메일을 입력하시오");
+                    $("#user_email").focus();
+                    return false;
+                }
+                $("#result").html("입력완료");
+		        return false; // 반드시 있어야 정상작동한다.!!!!!!
+	        }); //.submit() => submit버튼을 눌렀을 때
+	   
+        });
+        function openNewWindow() {
+            // 1. validation check
+            // 아이디 입력 확인
+            if(!$("#user_id").val() || !$("#user_birthday").val() || !$("#user_hp").val() || !$("#user_email_1").val() || !$("#user_email_2").val()){
+                alert("예매자 확인을 해주세요!")
+                $("#user_id").focus();
+                return false; // 다음칸으로 내려가는 동작 중지
+            }
+            else{
+                // // 새 창 열기
+                alert("결제가 완료되었습니다.");
+                window.open('ticketFee.html', '_blank');
+                return false;                        
+            }
+        }
+                
     </script>
     <style>
         .purchase{
@@ -189,8 +195,9 @@
                     <option value="4층 지정석">4층 지정석</option>
                     <option value="휠체어석">휠체어석</option>
                     <option value="외야 지정석">외야 지정석</option>
-                    <option value="외야 패밀리석">외야 패밀리석</option>
-                    <option value="외야 유아동반석">외야 유아동반석</option>
+                    <option value="외야 패밀리석 4인">외야 패밀리석 4인</option>
+                    <option value="외야 패밀리석 5인">외야 패밀리석 5인</option>
+                    <option value="외야 유아동반석 2인">외야 유아동반석 2인</option>
                 </select>
             </p>
             <table border="1" style="width: 416.55px;">
@@ -205,19 +212,19 @@
                 <tr id="normal-price">
                     <td style="background: whitesmoke;">기본가</td>
                     <td>일반</td>
-                    <td id="bgNormalPrice">17,000</td>
-                    <td ><input id="bgnCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                    <td id="bgNormalPrice">0</td>
+                    <td ><input id="bgnCnt" type="number" style="width: 25px;" value="0" min="0" max="5" oninput="calculator()">매</td>
                 </tr>
                 <tr>
                     <td rowspan="2" style="background: whitesmoke;">기본할인</td>
                     <td>멤버쉽</td>
-                    <td id="bgMPrice">17,000</td>
-                    <td><input id="bgmCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                    <td id="bgMPrice">0</td>
+                    <td><input id="bgmCnt" type="number" style="width: 25px;" value="0"  min="0" max="5" oninput="calculator()">매</td>
                 </tr>
                 <tr>
                     <td>듬린이</td>
-                    <td id="bgCPrice">10,000</td>
-                    <td><input id="bgcCnt" type="number" style="width: 25px;" value="0" oninput="calculator()">매</td>
+                    <td id="bgCPrice">0</td>
+                    <td><input id="bgcCnt" type="number" style="width: 25px;" value="0"  min="0" max="5" oninput="calculator()">매</td>
                 </tr>
             </table>
             <hr>
@@ -227,23 +234,23 @@
                 <table>
                     <tr>
                         <td> 이름 </td>
-                        <td><input id="user_id" type="text" size="30px" name="이름" required></td>
+                        <td><input id="user_id" type="text" size="30px" name="이름" ></td>
                     </tr>
                     <tr>
                         <td> 생년월일 </td>
-                        <td><input id="user_birthday" type="date" required></td>
+                        <td><input id="user_birthday" type="date" ></td>
                     </tr>
                     <tr>
                         <td> 연락처 </td>
-                        <td><input id="user_hp" type="text" size="30px"  placeholder="-빼고 입력하세요" required></td>
+                        <td><input id="user_hp" type="text" size="30px"  placeholder="-빼고 입력하세요" ></td>
                     </tr>
                     <tr>
                         <td> 이메일 </td>
                         <div>
                             <td>
-                            <input type="text"  id="emailChk"  name="userEmail1"  size="20"  style="width:100px">
+                            <input type="text"  id="user_email_1"  name="userEmail1"  size="20"  style="width:100px">
                             
-                            <input type="text"  id="emailChk"  name="userEmail2"  size="20"  style="width:100px">
+                            <input type="text"  id="user_email_2"  name="userEmail2"  size="20"  style="width:100px">
                             <select name="userEmail3"  style="width:100px"  onchange="selectEmailChk();">
                                 <option value="0">직접입력</option>
                                 <option value="@naver.com">네이버</option>
@@ -345,10 +352,10 @@
                         <td style="padding-right: 0;">
                             <div style="display: flex; justify-content: flex-end; background: white; " >
                                 <div id="cancle" style="margin-right: 10px;">
-                                    <input type="submit" value="취소하기" onclick="alert('결제가 취소되었습니다.'), openNewWindow()" >
+                                    <input type="reset" value="취소하기" onclick="alert('결제가 취소되었습니다.'), openNewWindow()" >
                                 </div>
                                 <div id="payit">
-                                    <input type="submit" value="결제하기" onclick="alert('결제가 완료되었습니다'), openNewWindow()">
+                                    <input type="button" value="결제하기"  onclick="openNewWindow()">
                                 </div>
                             </div>
                         </td>
