@@ -157,7 +157,7 @@
                 return false;                        
             }
         }
-                
+        
     </script>
     <style>
         .purchase{
@@ -183,7 +183,8 @@
 
             <p style=" background: rgb(214, 214, 214); border-top: 3px solid black; border-bottom: 1px solid black; margin-bottom: 0;">
                 <strong>좌석</strong>
-                <select id="parkseat">
+                <select id="parkseat" onchange="priceSelect()">
+                    <option value="#">좌석을 선택해 주세요.</option>
                     <option value="R.d club">R.d club</option>
                     <option value="1층 테이블석">1층 테이블석</option>
                     <option value="2층 테이블석">2층 테이블석</option>
@@ -365,5 +366,21 @@
             
         </div>
     </div>
+
+    <script>
+        function priceSelect(){
+            calculator()
+            // let getIdx = $("#parkseat").val();
+            // let priceArr = [
+            //     [100,200,300],
+            //     [400,500,600],
+            //     [100,200,300]
+            // ]
+
+            // let normalPrice = priceArr[getIdx][0];
+            // $("#bgNormalPrice").html(priceArr[1][1])
+            // // priceArr[1][1]
+        } 
+    </script>
 </body>
 </html>
