@@ -60,8 +60,14 @@
     font-family: arial;
   }
 
+.card h1{
+   font-size: 30px;
+}
+
 .card h1, p{
     color: black !important;
+    font-family: fantasy;
+    
 }
 
 /* 선수 종료 */
