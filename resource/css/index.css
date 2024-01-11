@@ -137,6 +137,7 @@ swiper-slide img {
 
 .section-2-con .news-bottom-1 {
     display: flex;
+    justify-content: space-between;
     padding: 0;
 }
 
@@ -154,6 +155,7 @@ swiper-slide img {
     transition: transform 0.2s ease;
 }
 
+.news-bottom-1.first li .card:hover,
 .section-2-con .news-bottom-1>.card:hover {
     transform: scale(1.02);
 }

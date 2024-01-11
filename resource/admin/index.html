@@ -93,6 +93,22 @@
     }
     </style>
 
+    <script>
+        //왼쪽 페이지 이동
+        function moveChange(type){
+            console.log(type)
+            if(type == 1){
+                window.location.href = "./member/member.html";
+            }else if(type == 2){
+                window.location.href = "./account/acocunt.html";
+            }else if(type == 3){
+                window.location.href = "./board/board.html";
+            }else {
+                window.location.href = "./ticket/ticket.html";
+            }
+        }
+    </script>
+
 
 </head>
 
@@ -131,12 +147,12 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">HOME</div>
                         <a class="nav-link" href="index.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             메인
                         </a>
-                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <div class="sb-sidenav-menu-heading">LIST</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -172,16 +188,18 @@
 
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
+
+                            <div class="card bg-primary text-white mb-4" onclick="moveChange(1)">
                                 <div class="card-body">회원</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" href="#">회원 상세내역</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
+                            <div class="card bg-warning text-white mb-4" onclick="moveChange(2)">
                                 <div class="card-body">결제</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" href="#">결제 상세내역</a>
@@ -190,7 +208,7 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success text-white mb-4">
+                            <div class="card bg-success text-white mb-4" onclick="moveChange(3)">
                                 <div class="card-body">게시판</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" href="#">게시판 상세내역</a>
@@ -199,7 +217,7 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-danger text-white mb-4">
+                            <div class="card bg-danger text-white mb-4" onclick="moveChange(4)">
                                 <div class="card-body">티켓</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" href="#">티켓 내역</a>

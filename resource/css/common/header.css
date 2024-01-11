@@ -128,7 +128,8 @@ header .header-bottom .menu-bg{
 
     /* 공통 2,3 */
     .mo-menu-box .home-box>a:nth-of-type(2),
-    .mo-menu-box .home-box>a:nth-of-type(3){
+    .mo-menu-box .home-box>a:nth-of-type(3),
+    .mo-menu-box .home-box>a:nth-of-type(4){
         font-size: 13px;
         color: orange !important;
         /* border: 1px solid orange; */
