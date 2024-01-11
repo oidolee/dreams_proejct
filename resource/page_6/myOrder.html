@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>티켓 환불</title>
+    <title>내 주문 내역</title>
     <!-- reset.css -->
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -85,24 +85,26 @@
             margin: 0 auto;
         }
 
-        .seatRefund-button {
-            margin: 100px 50px;
+        .mypage {
+            text-align: center;
         }
 
-        thead tr th {
-            color: #000 !important;
-            font-weight: bold;
-        }
-        
-        tbody tr td {
-            color: #000 !important;
+        .table {
+            vertical-align: middles;
         }
 
-        .seat-refund {
+        .mypage-button {
+            padding: 50px;
+            
+        }
+
+        .mypage {
             width: 1280px;
             margin: 0 auto;
         }
+        
     </style>
+
 
 
 </head>
@@ -273,12 +275,14 @@
         </div>
  
         <div id="slider_con" class="slider-con">
-            <img src="../image/banner/category_TICKET.jpg">
+            <img src="../image/banner/category_BOARDS.jpg">
         </div>
 
-        <div class="seat-refund">
-            <h2 style="color: #000 !important; font-weight: bold;"> <br>관람 티켓 환불<br><br> </h2>
-                <h4 style="color: #000 !important; font-weight: bold;"> <br> 구매한 티켓 <br><br></h4>
+        <!-- 내 주문 내역 시작 -->
+        <div class="mypage">
+            <h2 style="color: #000 !important; font-weight: bold;"> <br>내 주문 내역<br><br> </h2>
+            <a href="./myPage.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">마이페이지</button></a><br><br>
+            <h4 style="color: #000 !important; font-weight: bold;"> <br>최근 구매한 티켓 <br><br></h4>
                 <table class="table">
                     <thead>
                       <tr>
@@ -351,11 +355,61 @@
                       </tr>
                       
                     </tbody>
+                </table><br>
+
+            <a class="btn btn-primary" href="./seatRefund.html" role="button" style="color: aliceblue !important; ">티켓 환불</a><br><br>
+
+            <h4 style="color: #000 !important; font-weight: bold;"> <br> 최근 구매한 상품 <br><br></h4>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">주문번호</th>
+                        <th scope="col">사진</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">가격</th>
+                        <th scope="col">구매일자</th>
+                        <th scope="col">배송</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball1"> </label></td>
+                        <td>20240107A001</td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball2"> </label></td>
+                        <td>20240107A002</td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                      <tr>
+                        <td><label><input type="checkbox" name="goods" value="ball3"> </label></td>
+                        <td>20240107A003</td>
+                        <td><img src="https://qi-o.qoo10cdn.com/goods_image/5/2/8/4/10818135284s.png" width="150px" height="150px"></td>
+                        <td>로고볼(소)</td>
+                        <td>1개</td>
+                        <td>5000원</td>
+                        <td>2024년 1월 7일</td>
+                        <td>배송완료</td>
+                      </tr>
+                    </tbody>
                 </table>
 
-                <div class="seatRefund-button">
-                    <button class="btn btn-primary" type="button" style="color: #FFF !important;">환불</button>
-                    <a href="./myPage.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">취소</button></a>
+                <div class="mypage-button">
+                    <button class="btn btn-primary" type="button" style="color: #fff !important;">구매확정</button>
+                    <a href="goodsRefund.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">교환/환불</button></a>
                 </div>    
 
         </div>
