@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>티켓 환불</title>
+    <title>마이페이지</title>
     <!-- reset.css -->
     <link rel="stylesheet" href="../css/common/reset.css">
     <!-- Bootstrap css-->
@@ -51,58 +51,28 @@
         })
 
     </script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/b0cbfa47b4.js" crossorigin="anonymous"></script>
     <style>
         .container-box {
             padding: 0;
         }
 
-        input:focus {
-            outline: none;
-        }
-
-
-
-        .slider-con img{
-            width: 100%;
-        }
-
-        .center{max-width: 1240px; margin: 0 auto;}
-        .section-1-con{height: 440px;}
-        .section-1{height: 100%; padding: 80px 0;}
-        .section-1-top h2{text-align: center; }
-        .section-1-top h2 a{color: #000 !important;}
-        .section-1-bottom ul{display: flex; justify-content: space-between;  align-items: center; padding-top: 40px; padding-left: 0;}
-
-        .seat-refund {
-            text-align: center;
-        }
-
-        tabel {
-            text-align: center;
-        }
-
-        table {
-            margin: 0 auto;
-        }
-
-        .seatRefund-button {
-            margin: 100px 50px;
-        }
-
-        thead tr th {
-            color: #000 !important;
-            font-weight: bold;
+        .slider-con img {
+             width: 100%;
         }
         
-        tbody tr td {
-            color: #000 !important;
+        .modify-member {
+            width: 1280px;
+            text-align: center;
+            margin: auto;
         }
 
-        .seat-refund {
-            width: 1280px;
-            margin: 0 auto;
+        .modify-member label, input {
+            color: black !important;
         }
     </style>
+
 
 
 </head>
@@ -273,93 +243,70 @@
         </div>
  
         <div id="slider_con" class="slider-con">
-            <img src="../image/banner/category_TICKET.jpg">
+            <img src="../image/banner/category_BOARDS.jpg">
         </div>
 
-        <div class="seat-refund">
-            <h2 style="color: #000 !important; font-weight: bold;"> <br>관람 티켓 환불<br><br> </h2>
-                <h4 style="color: #000 !important; font-weight: bold;"> <br> 구매한 티켓 <br><br></h4>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">선택</th>
-                        <th scope="col">주문번호</th>
-                        <th scope="col">경기 일자</th>
-                        <th scope="col">좌석</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">수량</th>
-                        <th scope="col">가격</th>
-                        <th scope="col">구매일자</th>
-                        <th scope="col">배송</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                      <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>20240107T001</td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot12.png">외야지정석</td>
-                        <td>일반</td>
-                        <td>3개</td>
-                        <td>39,000원</td>
-                        <td>2024년 1월 7일</td>
-                        <td>배송완료</td>
-                      </tr>
-                      <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>20240107T002</td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot01.png">R.d club(로얄다이아몬드클럽)</td>
-                        <td>일반</td>
-                        <td>2개</td>
-                        <td>170,000원</td>
-                        <td>2024년 1월 7일</td>
-                        <td>배송완료</td>
-                      </tr>
-                      <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>20240107T003</td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot03.png">1층 테이블석</td>
-                        <td>일반</td>
-                        <td>2개</td>
-                        <td>150,000원</td>
-                        <td>2024년 1월 7일</td>
-                        <td>결제완료</td>
-                      </tr>
-                      <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>20240107T004</td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot04.png">2층 테이블석</td>
-                        <td>일반</td>
-                        <td>3개</td>
-                        <td>150,000원</td>
-                        <td>2024년 1월 7일</td>
-                        <td>배송중</td>
-                      </tr>
-                      <tr>
-                        <td><label><input type="checkbox" name="seats" value="low"> </label></td>
-                        <td>20240107T005</td>
-                        <td>2024년 4월 3일</td>
-                        <td><img src="https://www.heroesbaseball.co.kr/html/front/web_2018/images/ticket/icoDot05.png">내야커플석</td>
-                        <td>일반</td>
-                        <td>2개</td>
-                        <td>90,000원</td>
-                        <td>2024년 1월 7일</td>
-                        <td>배송중</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>
-
-                <div class="seatRefund-button">
-                    <button class="btn btn-primary" type="button" style="color: #FFF !important;">환불</button>
-                    <a href="./myPage.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">취소</button></a>
-                </div>    
-
-        </div>
-
+        <br><br><br>
+        <h2 style="text-align: center; color: black !important; font-weight: bold;" > 회원 정보수정 </h2>
+        <br><br><br>
+        
+        <form class="modify-member">
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_id" class="col-sm-2 col-form-label">아이디</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="user_id" placeholder="dreamsfan0111" disabled>
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_pwd" class="col-sm-2 col-form-label">비밀번호</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" id="user_pwd" placeholder="********">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_pwd_re" class="col-sm-2 col-form-label">비밀번호 확인</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" id="user_pwd_re" placeholder="*********">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_birth" class="col-sm-2 col-form-label">생년월일</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="user_birth" placeholder="19900111">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_hp" class="col-sm-2 col-form-label">연락처</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="user_hp" placeholder="010-1111-2222">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_address" class="col-sm-2 col-form-label">주소</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="user_address" placeholder="서울시 마포구 신수동 케이터틀 3층">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-2"></div>
+              <label for="user_email" class="col-sm-2 col-form-label">이메일</label>
+              <div class="col-sm-5">
+                <input type="email" class="form-control" id="user_email" placeholder="ict02@naver.com">
+              </div>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-primary" style="color: white !important;" >회원 정보 수정</button>
+            <a href="./myPage.html"><button class="btn btn-primary" type="button" style="color: #fff !important;">취소</button></a>
+        </form>
+          <br><br><br>
+        
+    
         <!-- 상단 이동버튼 -->
         <div id="goTop" class="goTop">
             <a href="#header"></a>
