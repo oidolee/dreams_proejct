@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Date 객체 생성
+        const date = new Date();
+
+        const viewYear = date.getFullYear();
+        const viewMonth = date.getMonth();
+
+
+        // 지난 달 마지막 Date, 이번 달 마지막 Date
+        const prevLast = new Date(viewYear, viewMonth, 0);
+        // const prevLast = new Date(viewYear, viewMonth, 1);
+        const thisLast = new Date(viewYear, viewMonth + 1, 0);
+        console.log(prevLast)
+        console.log(thisLast)
+    </script>
+</body>
+</html>
