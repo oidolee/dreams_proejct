@@ -83,9 +83,9 @@ const renderCalendar = () => {
 
         if (games[selectMonth] && games[selectMonth][i]) {
             if(games[selectMonth][i]['checkHome'] == 'T'){
-                homeAndAwayTag = '<strong style="color:#bb1b39; !important">HOME</strong>'
+                homeAndAwayTag = '<strong style="color:#bb1b39 !important; ">HOME</strong>'
             }else {
-                homeAndAwayTag = '<strong style="color:#369dd9; !important">AWAY</strong>'; 
+                homeAndAwayTag = '<strong style="color:#369dd9 !important; ">AWAY</strong>'; 
             }
             dates[i] = `<div class="date">
                             
@@ -105,7 +105,12 @@ const renderCalendar = () => {
                             </div>
                         </div>`;
         } else {
-            dates[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+            dates[i] = `<div class="date">
+                            <div class="contents">
+                                <span class="${condition}">${date}</span>
+                            </div>
+
+                        </div>`;
         }
    })
 

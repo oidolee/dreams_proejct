@@ -1,5 +1,99 @@
 @charset "UTF-8";
 
+.first-bg{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.first-bg > .text-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%); /* 좌측으로 이동하는 부분 */
+    z-index: 4;
+}
+
+.first-bg > .text-box > h2 {
+    font-size: 2.5rem !important;
+    color: #fff !important;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.first-bg #bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지하며 화면에 꽉 차게 표시 */
+    /* opacity: 0.5; */
+    animation: fadeInOut 6s ease-in-out infinite; /* 3초 간격으로 반복되는 애니메이션 */
+}
+
+  /* 애니메이션 정의 */
+  @keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.floating-box.center{
+    left: 33%;
+    top: -150%;
+    background-size: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+.floating-box.center::before {
+    content: "드림즈 바로가기";
+    white-space: pre-line;
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c5c50;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 1s forwards;
+}
+
+.floating-box.center::after {
+    content: "";
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    border: solid transparent;
+    border-width: 8px;
+    border-top-color: #1c5c50;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
 /* header container */
 .container-box {
     padding: 0;
