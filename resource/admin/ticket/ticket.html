@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    
     <style>
         .tableContent .displayNone {
             display: none !important;
@@ -91,6 +92,11 @@
             transform: translateY(10px);
         }
     }
+    .ticket-kind{
+        display: flex;
+        justify-content: center;
+    }
+    
     </style>
 
 
@@ -161,7 +167,7 @@
                     드림즈 관리자
                 </div>
             </nav>
-            <a href="../../index.html">
+            <a href="../index.html">
                 <div class="floating-box"></div>
             </a>
         </div>
@@ -173,27 +179,122 @@
                             <div class="card bg-danger text-white mb-4">
                                 <div class="card-body">티켓</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">티켓 상세내역</a>
+                                    <a class="small text-white stretched-link" href="ticket detail.html">티켓 상세내역</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
                    
                     </div>
+                    
 
-                    <!-- chart 부분 -->
-                    <div class="row">
-                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
-                        <div class="chartCon">
-                            <canvas id="myChart" width="900" height="500"></canvas>
+                    <div class=ticket-kind style="display: flex;">
+                        <div class="ticket-kind1">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="R.dclub-tab" data-bs-toggle="tab" data-bs-target="#R.dclub-tab-pane"
+                                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">R.d club 판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="1fTable-tab" data-bs-toggle="tab" data-bs-target="#1fTable-tab-pane"
+                                        type="button" role="tab" aria-controls="1fTable-tab-pane" aria-selected="false">1층 테이블석
+                                        판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="2fTable-tab" data-bs-toggle="tab" data-bs-target="#2fTable-tab-pane"
+                                        type="button" role="tab" aria-controls="2fTable-tab-pane" aria-selected="false">2층 테이블석
+                                        판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="darkBg-tab" data-bs-toggle="tab" data-bs-target="#darkBg-tab-pane"
+                                        type="button" role="tab" aria-controls="darkBg-tab-pane" aria-selected="false">다크버건디석 판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="bg-tab" data-bs-toggle="tab" data-bs-target="#bg-tab-pane" type="button"
+                                        role="tab" aria-controls="bg-tab-pane" aria-selected="false">버건디석 판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="outfield-tab" data-bs-toggle="tab" data-bs-target="#outfield-tab-pane"
+                                        type="button" role="tab" aria-controls="outfield-tab-pane" aria-selected="false">외야지정석 판매현황</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="34-tab" data-bs-toggle="tab" data-bs-target="#34-tab-pane" type="button"
+                                        role="tab" aria-controls="34-tab-pane" aria-selected="false">3, 4층지정석 판매현황</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <!-- R.dclub -->
+                                <div class="tab-pane fade show active" id="R.dclub-tab-pane" role="tabpanel" aria-labelledby="R.dclub-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-R.dclub" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 1fTable -->
+                                <div class="tab-pane fade hide" id="1fTable-tab-pane" role="tabpanel" aria-labelledby="1fTable-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-1fTable" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2fTable -->
+                                <div class="tab-pane fade hide" id="2fTable-tab-pane" role="tabpanel" aria-labelledby="2fTable-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-2fTable" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="darkBg-tab-pane" role="tabpanel" aria-labelledby="darkBg-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-darkBg" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade hide" id="bg-tab-pane" role="tabpanel" aria-labelledby="bg-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-bg" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade hide" id="outfield-tab-pane" role="tabpanel" aria-labelledby="outfield-tab"
+                                    tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-outfield" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade hide" id="34-tab-pane" role="tabpanel" aria-labelledby="34-tab" tabindex="0">
+                                    <div class="row">
+                                        <!-- // 차트를 그릴 영역으로 canvas태그를 사용한다. -->
+                                        <div class="chartCon">
+                                            <canvas id="myChart-34" width="900" height="500"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- chart 부분 -->
+                    
+                    
 
                     <script>
                         //chartJs
 
                         // 차트를 그럴 영역을 dom요소로 가져온다.
-                        var chartArea = document.getElementById('myChart').getContext('2d');
+                        var chartArea = document.getElementById('myChart-R.dclub').getContext('2d');
 
                         // 차트를 생성한다. 
                         var myChart = new Chart(chartArea, {
@@ -206,7 +307,7 @@
                                 // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
                                 datasets: [{
                                     // ⑤dataset의 이름(String)
-                                    label: '티켓 현황',
+                                    label: 'R.d club 티켓 판매현황',
                                     // ⑥dataset값(Array)
                                     data: [5, 19, 3, 5, 2, 3],
                                     // ⑦dataset의 배경색(rgba값을 String으로 표현)
@@ -251,6 +352,377 @@
 
                     </script>
 
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-1fTable').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '1층 테이블석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [20, 10, 3, 5, 2, 3],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-2fTable').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '2층 테이블석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [5, 19, 3, 5, 20, 3],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-darkBg').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '다크 버건디석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [5, 19, 13, 5, 2, 3],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-bg').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '버건디석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [5, 9, 3, 5, 2, 3],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-outfield').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '외야지정석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [11, 19, 13, 5, 2, 13],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <script>
+                        //chartJs
+
+                        // 차트를 그럴 영역을 dom요소로 가져온다.
+                        var chartArea = document.getElementById('myChart-34').getContext('2d');
+
+                        // 차트를 생성한다. 
+                        var myChart = new Chart(chartArea, {
+                            // ①차트의 종류(String)
+                            type: 'bar',
+                            // ②차트의 데이터(Object)
+                            data: {
+                                // ③x축에 들어갈 이름들(Array)
+                                labels: ['2023-08', '2023-09', '2023-10', '2023-11', '2023-12', '2024-01'],
+                                // ④실제 차트에 표시할 데이터들(Array), dataset객체들을 담고 있다.
+                                datasets: [{
+                                    // ⑤dataset의 이름(String)
+                                    label: '3, 4층 지정석 티켓 판매현황',
+                                    // ⑥dataset값(Array)
+                                    data: [5, 19, 3, 5, 2, 3],
+                                    // ⑦dataset의 배경색(rgba값을 String으로 표현)
+                                    backgroundColor: 'rgba(28, 92, 80, 0.2)',
+                                    // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    // ⑧dataset의 선 색(rgba값을 String으로 표현)
+                                    borderColor: 'rgba(28, 92, 80, 0.2)',
+                                    // ⑨dataset의 선 두께(Number)
+                                    borderWidth: 1
+                                }]
+                            },
+                            // ⑩차트의 설정(Object)
+                            options: {
+                                //가로 세로 값 수동 주기위함
+                                responsive: false,
+                                // ⑪축에 관한 설정(Object)
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '월' // x축 레이블
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '티켓 수' // y축 레이블
+                                        }
+                                    }
+                                },
+
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                    },
+                                }
+                            }
+                        });
+
+
+                    </script>
                     <!-- 드림즈 테이블 -->
                     <div class="card mb-4">
                         <div class="card-header">
