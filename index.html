@@ -29,63 +29,6 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- header.js -->
     <script src="./resource/js/common/header.js"></script>
-    <style>
-        .floating-box {
-            width: 50px;
-            height: 50px;
-            background: url("./resource/image/logoSmall.png") no-repeat 50% 50%;
-            background-size: 110px;
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-            animation: floatUpDown 1s infinite alternate;
-            transition: transform 0.3s;
-        }
-    
-        .floating-box:hover {
-            transform: translateY(-5px);
-        }
-    
-        .floating-box.left::before {
-            content: "드림즈 관리자";
-            white-space: pre-line;
-            position: absolute;
-            width: 58px;
-            text-align: center;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #1c5c50;
-            color: #fff;
-            padding: 5px;
-            border-radius: 3px;
-            font-size: 12px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-    
-        .floating-box.left:hover::before {
-            opacity: 1;
-        }
-    
-        @keyframes floatUpDown {
-            from {
-                transform: translateY(0);
-            }
-    
-            to {
-                transform: translateY(10px);
-            }
-        }
-
-    </style>
 
     <script>
         // 페이지 로드 후 실행될 함수
@@ -493,15 +436,13 @@
 
 
         <script>
-            // GENERAL SETTING
+            //메인 스크롤 이벤트 
             window.sr = ScrollReveal({ reset: true });
             let SRArr = ['.first-title','.slider-con','.section-1-con','.section-2-con','.section-3-con','footer'];
-            
-            // sr.reveal('.section-1-con', { 
-         
             SRArr.forEach(selector => {
                 sr.reveal(selector, { 
-                    origin: 'bottom', distance: '100px', duration: 2000
+                    origin: 'bottom', distance: '100px', duration: 2000,
+                    viewFactor: 0.1 // 10%만 보이면 나타나도록 설정
                 });
             });
             ScrollReveal().reveal('.headline');
