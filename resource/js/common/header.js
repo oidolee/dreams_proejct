@@ -51,6 +51,7 @@ $(function () {
       menuSon.hide();
 
       $(ele).on("click", function () {
+         alert("!")
          moMenuBoxLi.each(function (idx_1, ele_1) {
             let menuSon_1 = $(ele_1).find(".menu-son");
             menuSon_1.hide();
